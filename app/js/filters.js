@@ -29,15 +29,15 @@ angular.module('bjarkehs.filters', []).
             var hashTagRegExp = /(#([A-Za-z0-9-_]+))/g;
 
             function linkToUrl(url) {
-                return url.link(url);
+                return '<a href="'+ url +'" target="_blank">'+url+'</a>';
             }
 
             function linkToUser(match, atUser, user) {
-                return atUser.link(twitterUrl + '/' + user);
+                return '<a href="'+ twitterUrl + '/' + user +'" target="_blank">'+atUser+'</a>';
             }
 
             function linkToTag(match, hashTag, tag) {
-                return hashTag.link(twitterUrl + '/search/' + tag);
+                return '<a href="'+ twitterUrl + '/search/' + tag +'" target="_blank">'+hashTag+'</a>';
             }
 
             return str.replace(urlRegExp, linkToUrl).replace(atUserRegExp, linkToUser).replace(hashTagRegExp, linkToTag);
