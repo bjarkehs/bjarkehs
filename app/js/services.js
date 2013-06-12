@@ -15,4 +15,9 @@ angular.module('bjarkehs.services', ['ngResource'])
     return $resource('projects/:projectId.json', {}, {
       query: {method: 'GET', params: {projectId:'projects'}, isArray:true}
     });
+  }])
+  .factory('Tweet', ['$resource', function($resource) {
+    return $resource('twitter.json', {}, {
+      query: {method: 'GET', isArray:true}
+    });
   }]);

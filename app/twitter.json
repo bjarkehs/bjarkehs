@@ -1,0 +1,2922 @@
+[
+  {
+    "created_at": "Thu Jun 06 09:48:08 +0000 2013",
+    "id": 342578646604709888,
+    "id_str": "342578646604709888",
+    "text": "@mailbox Pretty please make an OS X app? I never thought I should say this, but I'm addicted to zero'ing my inbox... Hard to do on your Mac.",
+    "source": "web",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": 624947324,
+    "in_reply_to_user_id_str": "624947324",
+    "in_reply_to_screen_name": "mailbox",
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "urls": [],
+      "user_mentions": [
+        {
+          "screen_name": "mailbox",
+          "name": "Mailbox",
+          "id": 624947324,
+          "id_str": "624947324",
+          "indices": [
+            0,
+            8
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Mon Jun 03 23:42:32 +0000 2013",
+    "id": 341701463875125249,
+    "id_str": "341701463875125249",
+    "text": "RT @holman: Remember: good code isn’t about performance, or cleverness, or how you write your tests. It’s about how good the pun is in your…",
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status": {
+      "created_at": "Mon Jun 03 23:31:24 +0000 2013",
+      "id": 341698665443909632,
+      "id_str": "341698665443909632",
+      "text": "Remember: good code isn’t about performance, or cleverness, or how you write your tests. It’s about how good the pun is in your branch name.",
+      "source": "<a href=\"http://tapbots.com/software/tweetbot/mac\" rel=\"nofollow\">Tweetbot for Mac</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 11322372,
+        "id_str": "11322372",
+        "name": "Zach Holman",
+        "screen_name": "holman",
+        "location": "San Francisco, CA",
+        "description": "door-to-door git repository salesman for github inc.",
+        "url": "http://t.co/UArS1elmDi",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/UArS1elmDi",
+                "expanded_url": "http://zachholman.com/about",
+                "display_url": "zachholman.com/about",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 42650,
+        "friends_count": 178,
+        "listed_count": 1051,
+        "created_at": "Wed Dec 19 03:54:13 +0000 2007",
+        "favourites_count": 3505,
+        "utc_offset": -28800,
+        "time_zone": "Pacific Time (US & Canada)",
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 13930,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "profile_background_color": "000000",
+        "profile_background_image_url": "http://a0.twimg.com/profile_background_images/662911553/vupgbvgsnfbxzydb4qg2.png",
+        "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/662911553/vupgbvgsnfbxzydb4qg2.png",
+        "profile_background_tile": true,
+        "profile_image_url": "http://a0.twimg.com/profile_images/1444317557/holman_normal.png",
+        "profile_image_url_https": "https://si0.twimg.com/profile_images/1444317557/holman_normal.png",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/11322372/1347997234",
+        "profile_link_color": "64CDE9",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "FFFFFF",
+        "profile_text_color": "000000",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": false,
+        "notifications": null
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": {
+        "id": "41bcb736f84a799e",
+        "url": "https://api.twitter.com/1.1/geo/id/41bcb736f84a799e.json",
+        "place_type": "neighborhood",
+        "name": "Mission Bay",
+        "full_name": "Mission Bay, San Francisco",
+        "country_code": "US",
+        "country": "United States",
+        "bounding_box": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -122.40668412,
+                37.76405301
+              ],
+              [
+                -122.38151183999999,
+                37.76405301
+              ],
+              [
+                -122.38151183999999,
+                37.781991989999995
+              ],
+              [
+                -122.40668412,
+                37.781991989999995
+              ]
+            ]
+          ]
+        },
+        "attributes": {}
+      },
+      "contributors": null,
+      "retweet_count": 207,
+      "favorite_count": 95,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": []
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    "retweet_count": 207,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "urls": [],
+      "user_mentions": [
+        {
+          "screen_name": "holman",
+          "name": "Zach Holman",
+          "id": 11322372,
+          "id_str": "11322372",
+          "indices": [
+            3,
+            10
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Mon Jun 03 23:02:29 +0000 2013",
+    "id": 341691385902161920,
+    "id_str": "341691385902161920",
+    "text": "\"This is magical. #InboxZero via @Mailbox\" I'm just waiting for you @tpanum. http://t.co/Ux6MqSGs0a",
+    "source": "<a href=\"https://itunes.apple.com/us/app/mailbox/id576502633?mt=8&uo=4\" rel=\"nofollow\">Mailbox on iOS</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "InboxZero",
+          "indices": [
+            18,
+            28
+          ]
+        }
+      ],
+      "symbols": [],
+      "urls": [],
+      "user_mentions": [
+        {
+          "screen_name": "mailbox",
+          "name": "Mailbox",
+          "id": 624947324,
+          "id_str": "624947324",
+          "indices": [
+            33,
+            41
+          ]
+        },
+        {
+          "screen_name": "tpanum",
+          "name": "Thomas Kobber Panum",
+          "id": 297629598,
+          "id_str": "297629598",
+          "indices": [
+            68,
+            75
+          ]
+        }
+      ],
+      "media": [
+        {
+          "id": 341691385906356224,
+          "id_str": "341691385906356224",
+          "indices": [
+            77,
+            99
+          ],
+          "media_url": "http://pbs.twimg.com/media/BL3ugU_CYAA3VkD.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/BL3ugU_CYAA3VkD.jpg",
+          "url": "http://t.co/Ux6MqSGs0a",
+          "display_url": "pic.twitter.com/Ux6MqSGs0a",
+          "expanded_url": "http://twitter.com/bjarkehs/status/341691385902161920/photo/1",
+          "type": "photo",
+          "sizes": {
+            "thumb": {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            },
+            "large": {
+              "w": 640,
+              "h": 1096,
+              "resize": "fit"
+            },
+            "small": {
+              "w": 340,
+              "h": 582,
+              "resize": "fit"
+            },
+            "medium": {
+              "w": 600,
+              "h": 1028,
+              "resize": "fit"
+            }
+          }
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Thu May 30 00:07:13 +0000 2013",
+    "id": 339895739226402819,
+    "id_str": "339895739226402819",
+    "text": "Best comeback (The short version): http://t.co/TMZOSNlesy via @YouTube",
+    "source": "<a href=\"http://www.google.com/\" rel=\"nofollow\">Google</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "urls": [
+        {
+          "url": "http://t.co/TMZOSNlesy",
+          "expanded_url": "http://youtu.be/XuSNlPS-ZOU?a",
+          "display_url": "youtu.be/XuSNlPS-ZOU?a",
+          "indices": [
+            35,
+            57
+          ]
+        }
+      ],
+      "user_mentions": [
+        {
+          "screen_name": "YouTube",
+          "name": "YouTube",
+          "id": 10228272,
+          "id_str": "10228272",
+          "indices": [
+            62,
+            70
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Sat May 11 21:48:46 +0000 2013",
+    "id": 333337915440652289,
+    "id_str": "333337915440652289",
+    "text": "ARAM backdooring done right: http://t.co/xetDIrUsiO via @YouTube",
+    "source": "<a href=\"http://www.google.com/\" rel=\"nofollow\">Google</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "urls": [
+        {
+          "url": "http://t.co/xetDIrUsiO",
+          "expanded_url": "http://youtu.be/s_3tlkIJDQE?a",
+          "display_url": "youtu.be/s_3tlkIJDQE?a",
+          "indices": [
+            29,
+            51
+          ]
+        }
+      ],
+      "user_mentions": [
+        {
+          "screen_name": "YouTube",
+          "name": "YouTube",
+          "id": 10228272,
+          "id_str": "10228272",
+          "indices": [
+            56,
+            64
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Sat May 11 14:36:56 +0000 2013",
+    "id": 333229241317588994,
+    "id_str": "333229241317588994",
+    "text": "Alex is a liar..: http://t.co/jJMi3mMUIc via @YouTube",
+    "source": "<a href=\"http://www.google.com/\" rel=\"nofollow\">Google</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "urls": [
+        {
+          "url": "http://t.co/jJMi3mMUIc",
+          "expanded_url": "http://youtu.be/Z3iWdu6qJOc?a",
+          "display_url": "youtu.be/Z3iWdu6qJOc?a",
+          "indices": [
+            18,
+            40
+          ]
+        }
+      ],
+      "user_mentions": [
+        {
+          "screen_name": "YouTube",
+          "name": "YouTube",
+          "id": 10228272,
+          "id_str": "10228272",
+          "indices": [
+            45,
+            53
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Mon Apr 29 09:23:25 +0000 2013",
+    "id": 328801686514708480,
+    "id_str": "328801686514708480",
+    "text": "RT @raganello: Scott Adams seems to get it so right every time: http://t.co/ipbvq5Ootm #dilbert #bonus http://t.co/NlK9ejBdRG",
+    "source": "<a href=\"http://tapbots.com/software/tweetbot/mac\" rel=\"nofollow\">Twееtbot for Mac</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status": {
+      "created_at": "Mon Apr 29 09:06:14 +0000 2013",
+      "id": 328797359326777344,
+      "id_str": "328797359326777344",
+      "text": "Scott Adams seems to get it so right every time: http://t.co/ipbvq5Ootm #dilbert #bonus http://t.co/NlK9ejBdRG",
+      "source": "web",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 72968446,
+        "id_str": "72968446",
+        "name": "Paul Thompson",
+        "screen_name": "raganello",
+        "location": "London & The Hague",
+        "description": "Linux techie interested in opensource, electronics, astronomy, physics, Calabria, tree frogs & classic Fiat500 -- maybe I should just focus on one?",
+        "url": "http://t.co/E8XdhMV7SK",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/E8XdhMV7SK",
+                "expanded_url": "http://www.linkedin.com/profile/view?id=2409645",
+                "display_url": "linkedin.com/profile/view?i…",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 52650,
+        "friends_count": 46855,
+        "listed_count": 617,
+        "created_at": "Wed Sep 09 22:25:27 +0000 2009",
+        "favourites_count": 66,
+        "utc_offset": 0,
+        "time_zone": "London",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 449,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://a0.twimg.com/profile_images/3133654610/9af0191e83df8c6f7a62503ee666274e_normal.png",
+        "profile_image_url_https": "https://si0.twimg.com/profile_images/3133654610/9af0191e83df8c6f7a62503ee666274e_normal.png",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": false,
+        "notifications": null
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 11,
+      "favorite_count": 7,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "dilbert",
+            "indices": [
+              72,
+              80
+            ]
+          },
+          {
+            "text": "bonus",
+            "indices": [
+              81,
+              87
+            ]
+          }
+        ],
+        "symbols": [],
+        "urls": [
+          {
+            "url": "http://t.co/ipbvq5Ootm",
+            "expanded_url": "http://www.dilbert.com/strips/comic/2013-04-28",
+            "display_url": "dilbert.com/strips/comic/2…",
+            "indices": [
+              49,
+              71
+            ]
+          }
+        ],
+        "user_mentions": [],
+        "media": [
+          {
+            "id": 328797359335165952,
+            "id_str": "328797359335165952",
+            "indices": [
+              88,
+              110
+            ],
+            "media_url": "http://pbs.twimg.com/media/BJAfdM5CUAAOyDY.gif",
+            "media_url_https": "https://pbs.twimg.com/media/BJAfdM5CUAAOyDY.gif",
+            "url": "http://t.co/NlK9ejBdRG",
+            "display_url": "pic.twitter.com/NlK9ejBdRG",
+            "expanded_url": "http://twitter.com/raganello/status/328797359326777344/photo/1",
+            "type": "photo",
+            "sizes": {
+              "medium": {
+                "w": 600,
+                "h": 269,
+                "resize": "fit"
+              },
+              "large": {
+                "w": 640,
+                "h": 287,
+                "resize": "fit"
+              },
+              "thumb": {
+                "w": 150,
+                "h": 150,
+                "resize": "crop"
+              },
+              "small": {
+                "w": 340,
+                "h": 152,
+                "resize": "fit"
+              }
+            }
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "en"
+    },
+    "retweet_count": 11,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "dilbert",
+          "indices": [
+            87,
+            95
+          ]
+        },
+        {
+          "text": "bonus",
+          "indices": [
+            96,
+            102
+          ]
+        }
+      ],
+      "symbols": [],
+      "urls": [
+        {
+          "url": "http://t.co/ipbvq5Ootm",
+          "expanded_url": "http://www.dilbert.com/strips/comic/2013-04-28",
+          "display_url": "dilbert.com/strips/comic/2…",
+          "indices": [
+            64,
+            86
+          ]
+        }
+      ],
+      "user_mentions": [
+        {
+          "screen_name": "raganello",
+          "name": "Paul Thompson",
+          "id": 72968446,
+          "id_str": "72968446",
+          "indices": [
+            3,
+            13
+          ]
+        }
+      ],
+      "media": [
+        {
+          "id": 328797359335165952,
+          "id_str": "328797359335165952",
+          "indices": [
+            103,
+            125
+          ],
+          "media_url": "http://pbs.twimg.com/media/BJAfdM5CUAAOyDY.gif",
+          "media_url_https": "https://pbs.twimg.com/media/BJAfdM5CUAAOyDY.gif",
+          "url": "http://t.co/NlK9ejBdRG",
+          "display_url": "pic.twitter.com/NlK9ejBdRG",
+          "expanded_url": "http://twitter.com/raganello/status/328797359326777344/photo/1",
+          "type": "photo",
+          "sizes": {
+            "medium": {
+              "w": 600,
+              "h": 269,
+              "resize": "fit"
+            },
+            "large": {
+              "w": 640,
+              "h": 287,
+              "resize": "fit"
+            },
+            "thumb": {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            },
+            "small": {
+              "w": 340,
+              "h": 152,
+              "resize": "fit"
+            }
+          },
+          "source_status_id": 328797359326777344,
+          "source_status_id_str": "328797359326777344"
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Wed Apr 17 12:54:45 +0000 2013",
+    "id": 324506216988540929,
+    "id_str": "324506216988540929",
+    "text": "RT @mashable: Google Apps Down For Some Users http://t.co/1pS31wxc8O",
+    "source": "<a href=\"http://tapbots.com/software/tweetbot/mac\" rel=\"nofollow\">Twееtbot for Mac</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status": {
+      "created_at": "Wed Apr 17 12:49:27 +0000 2013",
+      "id": 324504883631902722,
+      "id_str": "324504883631902722",
+      "text": "Google Apps Down For Some Users http://t.co/1pS31wxc8O",
+      "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 972651,
+        "id_str": "972651",
+        "name": "Mashable",
+        "screen_name": "mashable",
+        "location": "",
+        "description": "News, resources, inspiration and fun for the connected generation. Tweets by @mashable staff.",
+        "url": "http://t.co/1Gm8aVACKn",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/1Gm8aVACKn",
+                "expanded_url": "http://mashable.com",
+                "display_url": "mashable.com",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 3319973,
+        "friends_count": 2681,
+        "listed_count": 103627,
+        "created_at": "Mon Mar 12 01:28:01 +0000 2007",
+        "favourites_count": 124,
+        "utc_offset": -18000,
+        "time_zone": "Eastern Time (US & Canada)",
+        "geo_enabled": false,
+        "verified": true,
+        "statuses_count": 80490,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "profile_background_color": "00AEEF",
+        "profile_background_image_url": "http://a0.twimg.com/profile_background_images/705312036/bf7ca2a3f077d7e57b12a5ea4f1db268.png",
+        "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/705312036/bf7ca2a3f077d7e57b12a5ea4f1db268.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://a0.twimg.com/profile_images/3690637553/5c348fee8afbcefa1978004a864a51ce_normal.png",
+        "profile_image_url_https": "https://si0.twimg.com/profile_images/3690637553/5c348fee8afbcefa1978004a864a51ce_normal.png",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/972651/1369156394",
+        "profile_link_color": "00AEEF",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "88DBF4",
+        "profile_text_color": "3B3B3B",
+        "profile_use_background_image": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": false,
+        "notifications": null
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 182,
+      "favorite_count": 9,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [
+          {
+            "url": "http://t.co/1pS31wxc8O",
+            "expanded_url": "http://on.mash.to/ZxekNK",
+            "display_url": "on.mash.to/ZxekNK",
+            "indices": [
+              32,
+              54
+            ]
+          }
+        ],
+        "user_mentions": []
+      },
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "en"
+    },
+    "retweet_count": 182,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "urls": [
+        {
+          "url": "http://t.co/1pS31wxc8O",
+          "expanded_url": "http://on.mash.to/ZxekNK",
+          "display_url": "on.mash.to/ZxekNK",
+          "indices": [
+            46,
+            68
+          ]
+        }
+      ],
+      "user_mentions": [
+        {
+          "screen_name": "mashable",
+          "name": "Mashable",
+          "id": 972651,
+          "id_str": "972651",
+          "indices": [
+            3,
+            12
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Sat Apr 13 20:56:50 +0000 2013",
+    "id": 323177983777046528,
+    "id_str": "323177983777046528",
+    "text": "This is what a regular day of developing with @tpanum does to my browser. #ios #developing #software #somanytabs http://t.co/HFJhXERA8I",
+    "source": "<a href=\"http://tapbots.com/software/tweetbot/mac\" rel=\"nofollow\">Twееtbot for Mac</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": {
+      "id": "b28d4ce807565ae9",
+      "url": "https://api.twitter.com/1.1/geo/id/b28d4ce807565ae9.json",
+      "place_type": "city",
+      "name": "Aalborg",
+      "full_name": "Aalborg, North Jutland",
+      "country_code": "DK",
+      "country": "Denmark",
+      "bounding_box": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9.390957,
+              56.8108719
+            ],
+            [
+              10.3894355,
+              56.8108719
+            ],
+            [
+              10.3894355,
+              57.2298896
+            ],
+            [
+              9.390957,
+              57.2298896
+            ]
+          ]
+        ]
+      },
+      "attributes": {}
+    },
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "ios",
+          "indices": [
+            74,
+            78
+          ]
+        },
+        {
+          "text": "developing",
+          "indices": [
+            79,
+            90
+          ]
+        },
+        {
+          "text": "software",
+          "indices": [
+            91,
+            100
+          ]
+        },
+        {
+          "text": "somanytabs",
+          "indices": [
+            101,
+            112
+          ]
+        }
+      ],
+      "symbols": [],
+      "urls": [],
+      "user_mentions": [
+        {
+          "screen_name": "tpanum",
+          "name": "Thomas Kobber Panum",
+          "id": 297629598,
+          "id_str": "297629598",
+          "indices": [
+            46,
+            53
+          ]
+        }
+      ],
+      "media": [
+        {
+          "id": 323177983789629441,
+          "id_str": "323177983789629441",
+          "indices": [
+            113,
+            135
+          ],
+          "media_url": "http://pbs.twimg.com/media/BHwoqfsCAAEAkjN.png",
+          "media_url_https": "https://pbs.twimg.com/media/BHwoqfsCAAEAkjN.png",
+          "url": "http://t.co/HFJhXERA8I",
+          "display_url": "pic.twitter.com/HFJhXERA8I",
+          "expanded_url": "http://twitter.com/bjarkehs/status/323177983777046528/photo/1",
+          "type": "photo",
+          "sizes": {
+            "medium": {
+              "w": 600,
+              "h": 354,
+              "resize": "fit"
+            },
+            "thumb": {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            },
+            "small": {
+              "w": 340,
+              "h": 201,
+              "resize": "fit"
+            },
+            "large": {
+              "w": 1024,
+              "h": 604,
+              "resize": "fit"
+            }
+          }
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Wed Apr 10 15:05:58 +0000 2013",
+    "id": 322002522376130560,
+    "id_str": "322002522376130560",
+    "text": "At a presentation on \"Tendencies in Security\" with @tpanum #compsci #security #presentations",
+    "source": "<a href=\"http://www.apple.com/\" rel=\"nofollow\">OS X</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "compsci",
+          "indices": [
+            59,
+            67
+          ]
+        },
+        {
+          "text": "security",
+          "indices": [
+            68,
+            77
+          ]
+        },
+        {
+          "text": "presentations",
+          "indices": [
+            78,
+            92
+          ]
+        }
+      ],
+      "symbols": [],
+      "urls": [],
+      "user_mentions": [
+        {
+          "screen_name": "tpanum",
+          "name": "Thomas Kobber Panum",
+          "id": 297629598,
+          "id_str": "297629598",
+          "indices": [
+            51,
+            58
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Tue Apr 09 20:23:06 +0000 2013",
+    "id": 321719941839605760,
+    "id_str": "321719941839605760",
+    "text": "I liked a @YouTube video http://t.co/LQtlOa96rU Sydfyn Style",
+    "source": "<a href=\"http://www.google.com/\" rel=\"nofollow\">Google</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "urls": [
+        {
+          "url": "http://t.co/LQtlOa96rU",
+          "expanded_url": "http://youtu.be/4Ve9WOq2n_M?a",
+          "display_url": "youtu.be/4Ve9WOq2n_M?a",
+          "indices": [
+            25,
+            47
+          ]
+        }
+      ],
+      "user_mentions": [
+        {
+          "screen_name": "YouTube",
+          "name": "YouTube",
+          "id": 10228272,
+          "id_str": "10228272",
+          "indices": [
+            10,
+            18
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "et"
+  },
+  {
+    "created_at": "Fri Apr 05 07:38:31 +0000 2013",
+    "id": 320077980254732288,
+    "id_str": "320077980254732288",
+    "text": "@tpanum obviously I'm the guy on the left.. #pairprogramming",
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "truncated": false,
+    "in_reply_to_status_id": 320067348985942017,
+    "in_reply_to_status_id_str": "320067348985942017",
+    "in_reply_to_user_id": 297629598,
+    "in_reply_to_user_id_str": "297629598",
+    "in_reply_to_screen_name": "tpanum",
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "pairprogramming",
+          "indices": [
+            44,
+            60
+          ]
+        }
+      ],
+      "symbols": [],
+      "urls": [],
+      "user_mentions": [
+        {
+          "screen_name": "tpanum",
+          "name": "Thomas Kobber Panum",
+          "id": 297629598,
+          "id_str": "297629598",
+          "indices": [
+            0,
+            7
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Thu Apr 04 15:59:28 +0000 2013",
+    "id": 319841660169232384,
+    "id_str": "319841660169232384",
+    "text": "Cisco phones, y u so retarded? #cisco #phones #jtapi",
+    "source": "<a href=\"http://www.apple.com/\" rel=\"nofollow\">OS X</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "cisco",
+          "indices": [
+            31,
+            37
+          ]
+        },
+        {
+          "text": "phones",
+          "indices": [
+            38,
+            45
+          ]
+        },
+        {
+          "text": "jtapi",
+          "indices": [
+            46,
+            52
+          ]
+        }
+      ],
+      "symbols": [],
+      "urls": [],
+      "user_mentions": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "es"
+  },
+  {
+    "created_at": "Mon Mar 25 21:43:52 +0000 2013",
+    "id": 316304450820112385,
+    "id_str": "316304450820112385",
+    "text": "Giving Linux Mint another go. Hopefully ATI have fixed their driver issues because development on Windows = no go #linux #mint #development",
+    "source": "<a href=\"http://www.apple.com\" rel=\"nofollow\">iOS</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "linux",
+          "indices": [
+            114,
+            120
+          ]
+        },
+        {
+          "text": "mint",
+          "indices": [
+            121,
+            126
+          ]
+        },
+        {
+          "text": "development",
+          "indices": [
+            127,
+            139
+          ]
+        }
+      ],
+      "symbols": [],
+      "urls": [],
+      "user_mentions": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Sun Mar 24 06:56:31 +0000 2013",
+    "id": 315718755051245569,
+    "id_str": "315718755051245569",
+    "text": "Omw to Copenhagen Airport to send my sister on a plane to the US #travel #plane #kastrupairport",
+    "source": "<a href=\"http://www.apple.com\" rel=\"nofollow\">iOS</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "travel",
+          "indices": [
+            65,
+            72
+          ]
+        },
+        {
+          "text": "plane",
+          "indices": [
+            73,
+            79
+          ]
+        },
+        {
+          "text": "kastrupairport",
+          "indices": [
+            80,
+            95
+          ]
+        }
+      ],
+      "symbols": [],
+      "urls": [],
+      "user_mentions": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Sat Mar 23 22:34:21 +0000 2013",
+    "id": 315592379660910593,
+    "id_str": "315592379660910593",
+    "text": "RT @jakefogelnest: Here's a Twitter Tip: use #hashtags to connect with users who have similar interests! #HiddenToiletCameras",
+    "source": "<a href=\"http://tapbots.com/software/tweetbot/mac\" rel=\"nofollow\">Twееtbot for Mac</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status": {
+      "created_at": "Sat Mar 23 22:15:50 +0000 2013",
+      "id": 315587721320087552,
+      "id_str": "315587721320087552",
+      "text": "Here's a Twitter Tip: use #hashtags to connect with users who have similar interests! #HiddenToiletCameras",
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 14546414,
+        "id_str": "14546414",
+        "name": "Jake Fogelnest",
+        "screen_name": "jakefogelnest",
+        "location": "Los Angeles",
+        "description": "Professional.",
+        "url": "http://t.co/FKLT0447IO",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/FKLT0447IO",
+                "expanded_url": "http://www.jakefogelnest.com/",
+                "display_url": "jakefogelnest.com",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 53433,
+        "friends_count": 1352,
+        "listed_count": 1094,
+        "created_at": "Sat Apr 26 15:20:23 +0000 2008",
+        "favourites_count": 36154,
+        "utc_offset": -18000,
+        "time_zone": "Eastern Time (US & Canada)",
+        "geo_enabled": false,
+        "verified": true,
+        "statuses_count": 35147,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "profile_background_color": "1A1B1F",
+        "profile_background_image_url": "http://a0.twimg.com/profile_background_images/21463461/jftwitter.001.jpg",
+        "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/21463461/jftwitter.001.jpg",
+        "profile_background_tile": false,
+        "profile_image_url": "http://a0.twimg.com/profile_images/2752473267/8683e8fc7b18d965181b92b6ab838449_normal.jpeg",
+        "profile_image_url_https": "https://si0.twimg.com/profile_images/2752473267/8683e8fc7b18d965181b92b6ab838449_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/14546414/1353208179",
+        "profile_link_color": "F91A33",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "252429",
+        "profile_text_color": "808080",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": false,
+        "notifications": null
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 107,
+      "favorite_count": 187,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "hashtags",
+            "indices": [
+              26,
+              35
+            ]
+          },
+          {
+            "text": "HiddenToiletCameras",
+            "indices": [
+              86,
+              106
+            ]
+          }
+        ],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": []
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    "retweet_count": 107,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "hashtags",
+          "indices": [
+            45,
+            54
+          ]
+        },
+        {
+          "text": "HiddenToiletCameras",
+          "indices": [
+            105,
+            125
+          ]
+        }
+      ],
+      "symbols": [],
+      "urls": [],
+      "user_mentions": [
+        {
+          "screen_name": "jakefogelnest",
+          "name": "Jake Fogelnest",
+          "id": 14546414,
+          "id_str": "14546414",
+          "indices": [
+            3,
+            17
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Sat Mar 23 21:52:31 +0000 2013",
+    "id": 315581854143098880,
+    "id_str": "315581854143098880",
+    "text": "That feeling when you want a Coke, but you know it’s kinda late and you should really not drink so much… #coke #thedrinkjeez #addiction",
+    "source": "<a href=\"http://tapbots.com/software/tweetbot/mac\" rel=\"nofollow\">Twееtbot for Mac</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": {
+      "id": "19d25de1149b6307",
+      "url": "https://api.twitter.com/1.1/geo/id/19d25de1149b6307.json",
+      "place_type": "city",
+      "name": "Hjørring",
+      "full_name": "Hjørring, North Jutland",
+      "country_code": "DK",
+      "country": "Denmark",
+      "bounding_box": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              9.6899324,
+              57.3068859
+            ],
+            [
+              10.4120014,
+              57.3068859
+            ],
+            [
+              10.4120014,
+              57.6193226
+            ],
+            [
+              9.6899324,
+              57.6193226
+            ]
+          ]
+        ]
+      },
+      "attributes": {}
+    },
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "coke",
+          "indices": [
+            105,
+            110
+          ]
+        },
+        {
+          "text": "thedrinkjeez",
+          "indices": [
+            111,
+            124
+          ]
+        },
+        {
+          "text": "addiction",
+          "indices": [
+            125,
+            135
+          ]
+        }
+      ],
+      "symbols": [],
+      "urls": [],
+      "user_mentions": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Thu Mar 14 10:16:13 +0000 2013",
+    "id": 312145131061010432,
+    "id_str": "312145131061010432",
+    "text": "Reddit AMA: http://t.co/TinxEVHUyI #reddit #ama #iama #casualiama",
+    "source": "<a href=\"http://www.apple.com/\" rel=\"nofollow\">OS X</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "reddit",
+          "indices": [
+            35,
+            42
+          ]
+        },
+        {
+          "text": "ama",
+          "indices": [
+            43,
+            47
+          ]
+        },
+        {
+          "text": "iama",
+          "indices": [
+            48,
+            53
+          ]
+        },
+        {
+          "text": "casualiama",
+          "indices": [
+            54,
+            65
+          ]
+        }
+      ],
+      "symbols": [],
+      "urls": [
+        {
+          "url": "http://t.co/TinxEVHUyI",
+          "expanded_url": "http://redd.it/1a9ynw",
+          "display_url": "redd.it/1a9ynw",
+          "indices": [
+            12,
+            34
+          ]
+        }
+      ],
+      "user_mentions": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "id"
+  },
+  {
+    "created_at": "Tue Feb 26 15:06:34 +0000 2013",
+    "id": 306419996878327810,
+    "id_str": "306419996878327810",
+    "text": "RT @meeboxnet: Når vi fremover skriver på Facebook og Twitter, vil vi afslutte med /a eller /p for hhv. Anders og Patrick, så I ved hvem ...",
+    "source": "<a href=\"http://itunes.apple.com/us/app/twitter/id409789998?mt=12\" rel=\"nofollow\">Twitter for Mac</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status": {
+      "created_at": "Tue Feb 26 14:02:08 +0000 2013",
+      "id": 306403779497054208,
+      "id_str": "306403779497054208",
+      "text": "Når vi fremover skriver på Facebook og Twitter, vil vi afslutte med /a eller /p for hhv. Anders og Patrick, så I ved hvem I skriver med. :-)",
+      "source": "<a href=\"http://sproutsocial.com\" rel=\"nofollow\">Sprout Social</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 152243062,
+        "id_str": "152243062",
+        "name": "Meebox",
+        "screen_name": "meeboxnet",
+        "location": "København, Danmark",
+        "description": "Kundernes foretrukne udbyder af #Webhoteller og #Cloud-løsninger. Suveræne priser og verdensklasse kundeservice!\r\n\r\n/p = @ptheander, CSO\r\n/a = @anderseiler, CTO",
+        "url": "https://t.co/EDFS7QDHIa",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "https://t.co/EDFS7QDHIa",
+                "expanded_url": "https://meebox.net",
+                "display_url": "meebox.net",
+                "indices": [
+                  0,
+                  23
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 537,
+        "friends_count": 69,
+        "listed_count": 2,
+        "created_at": "Sat Jun 05 13:10:20 +0000 2010",
+        "favourites_count": 29,
+        "utc_offset": 3600,
+        "time_zone": "Copenhagen",
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 1208,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "profile_background_color": "F0F0F0",
+        "profile_background_image_url": "http://a0.twimg.com/profile_background_images/228182605/bg.gif",
+        "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/228182605/bg.gif",
+        "profile_background_tile": true,
+        "profile_image_url": "http://a0.twimg.com/profile_images/1300066295/meebox_square_normal.jpg",
+        "profile_image_url_https": "https://si0.twimg.com/profile_images/1300066295/meebox_square_normal.jpg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "7A7A7A",
+        "profile_sidebar_fill_color": "EDEDED",
+        "profile_text_color": "333333",
+        "profile_use_background_image": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": false,
+        "notifications": null
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 1,
+      "favorite_count": 1,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": []
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "da"
+    },
+    "retweet_count": 1,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "urls": [],
+      "user_mentions": [
+        {
+          "screen_name": "meeboxnet",
+          "name": "Meebox",
+          "id": 152243062,
+          "id_str": "152243062",
+          "indices": [
+            3,
+            13
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "da"
+  },
+  {
+    "created_at": "Tue Feb 26 12:20:34 +0000 2013",
+    "id": 306378221820182528,
+    "id_str": "306378221820182528",
+    "text": "Not sure if old news. But Mozilla is launching Firefox OS for smartphones https://t.co/49VWmyuWtO #firefoxos #mozilla #smartphones",
+    "source": "<a href=\"http://www.apple.com/\" rel=\"nofollow\">OS X</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 39034062,
+      "id_str": "39034062",
+      "name": "Bjarke Søndergaard",
+      "screen_name": "bjarkehs",
+      "location": "Denmark",
+      "description": "A danish guy studying software engineering, who finds the most useless, but funny stuff on the interwebs.",
+      "url": "http://t.co/IijNKx1xXY",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/IijNKx1xXY",
+              "expanded_url": "http://www.bjarkehs.dk",
+              "display_url": "bjarkehs.dk",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 48,
+      "friends_count": 133,
+      "listed_count": 1,
+      "created_at": "Sun May 10 11:34:34 +0000 2009",
+      "favourites_count": 0,
+      "utc_offset": 3600,
+      "time_zone": "Copenhagen",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 3457,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_image_url": "http://a0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_image_url_https": "https://si0.twimg.com/profile_images/1266892483/avatar_normal.jpg",
+      "profile_link_color": "2FC2EF",
+      "profile_sidebar_border_color": "181A1E",
+      "profile_sidebar_fill_color": "252429",
+      "profile_text_color": "666666",
+      "profile_use_background_image": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [
+        {
+          "text": "firefoxos",
+          "indices": [
+            98,
+            108
+          ]
+        },
+        {
+          "text": "mozilla",
+          "indices": [
+            109,
+            117
+          ]
+        },
+        {
+          "text": "smartphones",
+          "indices": [
+            118,
+            130
+          ]
+        }
+      ],
+      "symbols": [],
+      "urls": [
+        {
+          "url": "https://t.co/49VWmyuWtO",
+          "expanded_url": "https://blog.mozilla.org/blog/2013/02/24/mozilla-unlocks-the-power-of-the-web-on-mobile-with-firefox-os/",
+          "display_url": "blog.mozilla.org/blog/2013/02/2…",
+          "indices": [
+            74,
+            97
+          ]
+        }
+      ],
+      "user_mentions": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+  }
+]
