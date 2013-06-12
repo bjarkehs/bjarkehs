@@ -1,0 +1,73 @@
+[
+
+    {
+        "title":"SLaX Media Agent",
+        "subtitle":"If You're Very Lazy - Like the Rest of Us!",
+        "id":"slax",
+        "description":"For this project our focus was on creating a media agent. The goal for our application, SlaX, was to successfully implement all the desired functions. Using the MVC model, analysis, and extensive design before implementation we have experienced first hand how these tools help us during the implementation. While completing this project we have gained a lot of experience, especially during the pre-implementation analysis and design decisions, not to mention learning to program with C#.",
+        "participants":["Anders Eiler", "Esben Pilgaard Møller", "Martin Sørensen", "Rasmus Steiniche", "Thomas Kobber Panum"],
+        "date":"2010-12-16",
+        "language":"english"
+    },
+    {
+        "title":"Den Gode Orm",
+        "id":"goodworm",
+        "description":"During this project we researched if one could use the ideas (and functionalities) of a malicious computer worm for good tasks. This required knowledge about malicious worms and their functionalities - but also the security holes they exploit. We constructed a prototype of a good worm, which spreads over the network and exploits a certain security hole to then fix it. Furthermore we concluded that it is possible! The prototype should be seen a template for how to further develop the technology and the way of thinking for producing good worms in working order. In the end we considered and dicussed if the development of the prototype and its functionalities could be done better, and if it has performed what it was made to do - to protect the computer from its malicious conspecifics.",
+        "participants":["Adi Hadzikadunic", "Anders Eiler", "Esben Pilgaard Møller", "Magnus Stubman Reichenauer", "Mikkel Skov Christensen"],
+        "date":"2009-12-14",
+        "language":"danish"
+    },
+    {
+        "title":"Reflektiv Programming",
+        "id":"reflective",
+        "description":"During my second semester we wrote a report in which we bring attention to reflection-oriented programming (aka. ROP). The focus in the report is to determine when it is beneficial to use and implement ROP. We furthermore researched two of the biggest IT scandals in Denmark, and we try to find the cause. What we were interested in was: could ROP have been used, and would it have saved the respective companies money when looking long term? During the project we initiated a meeting with KMD, where we learned how they use ROP, but also how they would go about developing their programs - here I mean what sort of model they'd use, e.g. the water fall model. Lastly we wanted to try and use ROP, so we wrote to simple programs in Java. One where we used only standard OOP principles, and the other would implement the ROP ideas. We then analyzed the pro's and con's for using ROP based on our codes.",
+        "participants":["Adi Hadzikadunic", "Anders Eiler", "Esben Pilgaard Møller", "Magnus Stubman Reichenauer", "Mikkel Skov Christensen"],
+        "date":"2010-05-25",
+        "language":"danish"
+    },
+    {
+        "title":"Arongadongk",
+        "subtitle":"Multi Agent System Programming Language",
+        "id":"arongadongk",
+        "description":"The Arongadongk language, with its appurtenant compiler, is designed with the purpose to relieve the programmer of trivial tasks between him and his goal. The goal is to find out which local rules to apply to a set of agents in order to make them enact his desired global behavior. This is achieved by constructing a sequential imperative language with a platform independent compiler which implements a GUI and a mechanism for automation of the agents.",
+        "participants":["Alex Bondo Andersen", "Kim Ahlstrøm Jakobsen", "Magnus Stubman Reichenauer", "Mikael Midtgaard", "Rasmus Veiergang Prentow"],
+        "date":"2011-05-27",
+        "language":"english"
+    },
+    {
+        "title":"Muttley and the Pigeon",
+        "subtitle":"An embedded real-time system for tracking and following vehicles",
+        "id":"muttley",
+        "description":"The Muttley and the Pigeon project involves two cars created with the use of the LEGO NXT and implemented using the nxtOSEK platform. These two cars, where one is the leader and one is the follower, are designed to follow each other as if it was a road-train on a highway. The leader uses the sonar sensors to avoid obstacles, while the follower uses them to keep track of the leader.",
+        "participants":["Anders Eiler", "Esben Pilgaard Møller", "Magnus Stubman Reichenauer", "Rasmus Steiniche", "Thomas Kobber Panum"],
+        "date":"2011-12-19",
+        "language":"english"
+    },
+    {
+        "title":"MyMoodle",
+        "subtitle":"A PBL extension for Moodle",
+        "id":"bachelor",
+        "description":"MyMoodle is an attempt to implement Aalborg's Problem Based Learning Model in Moodle. The project seeks to integrate project groups and associated tools in Moodle, while keeping the Moodle core untouched. MyMoodle currently enables each project group to create blackboards, tasks, and meetings, while keeping track of these on a timeline. The project was conducted using modified Scrum of Scrums as development method. It should be seen as a partial solution, as it is the intention it will be continued by other students next year.",
+        "participants":["Anders Eiler", "Esben Pilgaard Møller", "Martin Sørensen"],
+        "date":"2012-06-04",
+        "language":"english"
+    },
+    {
+        "title":"LONE",
+        "subtitle":"LONE is Observation of Nondeterministic Environments",
+        "id":"lone",
+        "description":"Video surveillance is becoming more and more used around the world. The ways technology allow us to video surveil today is, however, quite expensive and has its limitations. This paper seeks to take advantage of modern technology to provide a new approach of video surveil large areas in a cost-efficient way. The goal is a scalable web-application that allows multiple users to control and view the video stream unmanned air-crafts to do remote and cost-efficient surveillance of large areas.",
+        "participants":["Anders Eiler", "Esben Pilgaard Møller", "Rasmus Steiniche", "Thomas Kobber Panum"],
+        "date":"2012-12-20",
+        "language":"english"
+    },
+    {
+        "title":"Yink",
+        "subtitle":"Mobile Call Administration for Cisco Terminals",
+        "id":"yink",
+        "description":"The use of phones is changing from landline phones to mobile phones. This change is not reflected in the IP PBX solutions available today. This report investigates how an extension can be developed to Cisco VoIP to reflect the change in phone usage. The solution, named Yink, is a scalable client-server system. The clients are mobile applications providing PBX functionality, and the server integrates the mobile phones with the existing Cisco VoIP system.",
+        "participants":["Esben Pilgaard Møller", "Rasmus Steiniche", "Thomas Kobber Panum"],
+        "date":"2013-06-03",
+        "language":"english"
+    }
+]

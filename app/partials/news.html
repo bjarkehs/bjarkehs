@@ -1,0 +1,8 @@
+<h2>News</h2>
+<div ng-repeat="project in projects | orderBy:'date':true | limitTo:5">
+    <h3>{{project.title}}</h3>
+    <h4 ng-show="project.subtitle != ''">{{project.subtitle}}</h4>
+    <p>Date: {{project.date}}</p>
+    <p>{{project.description}}</p>
+    <p>In {{project.language | capitalize}}</p>
+</div>

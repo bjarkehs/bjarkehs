@@ -1,0 +1,32 @@
+[
+    {
+        "name":"Facebook",
+        "url":"http://www.facebook.com/eathuz",
+        "title":"Friend Me on Facebook"
+    },
+    {
+        "name":"Bjarkes Billedbog",
+        "url":"http://blog.bjarkehs.dk/",
+        "title":"Check Out My Blog With Funnies"
+    },
+    {
+        "name":"YouTube",
+        "url":"http://www.youtube.com/tixusdk",
+        "title":"Follow Me on YouTube"
+    },
+    {
+        "name":"Google+",
+        "url":"https://plus.google.com/113495182110200776910/posts",
+        "title":"Follow Me on Google+"
+    },
+    {
+        "name":"Dev Blog",
+        "url":"http://wp.bjarkehs.dk",
+        "title":"Developer Thoughts"
+    },
+    {
+        "name":"Twitter",
+        "url":"http://www.twitter.com/bjarkehs",
+        "title":"Follow Me on Twitter"
+    }
+]
