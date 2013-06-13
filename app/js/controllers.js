@@ -13,6 +13,17 @@ angular.module('bjarkehs.controllers', []).
     $scope.outlets = Outlet.query();
     $scope.projects = Project.query();
     $scope.tweets = Tweet.query();
+    $scope.limit = 5;
+    $scope.dateOrder = true;
+
+    $scope.toggleOrder = function(current) {
+        if (current) {
+            $scope.dateOrder = false;
+        }
+        else {
+            $scope.dateOrder = true;
+        }
+    };
   }])
   .controller('MyCtrl2', [function() {
 

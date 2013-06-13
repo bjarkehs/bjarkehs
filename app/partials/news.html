@@ -1,8 +1,16 @@
 <h2>News</h2>
-<div ng-repeat="project in projects | orderBy:'date':true | limitTo:5">
+<div ng-click="limit = 5">Limit to 5</div>
+<div ng-click="limit = projects.length">All</div>
+<div ng-click="toggleOrder(dateOrder)">Order</div>
+<div ng-repeat="project in projects | orderBy:'date':dateOrder | limitTo:limit">
     <h3>{{project.title}}</h3>
     <h4 ng-show="project.subtitle != ''">{{project.subtitle}}</h4>
     <p>Date: {{project.date}}</p>
     <p>{{project.description}}</p>
     <p>In {{project.language | capitalize}}</p>
+    <ul>
+        <li ng-repeat="link in project.links">
+            <a ng-href="link.url">{{link.title}}</a>
+        </li>
+    </ul>
 </div>

@@ -42,4 +42,9 @@ angular.module('bjarkehs.filters', []).
 
             return str.replace(urlRegExp, linkToUrl).replace(atUserRegExp, linkToUser).replace(hashTagRegExp, linkToTag);
         }
-    });
+    })
+    .filter('twitterToTimestamp', ['$filter', function($filter) {
+        return function(date) {
+            return new Date(Date.parse(date)).getTime();
+        }
+    }]);
