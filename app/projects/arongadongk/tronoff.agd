@@ -1,0 +1,977 @@
+global bool rasmusDead;
+global bool rasmus2Dead;
+global bool bjarkeDead;
+global int rasmusX;
+global int rasmusY;
+global int rasmusC;
+global int rasmusS;
+global string standardColor;
+global int rasmusDirection;
+global int rasmus2X;
+global int rasmus2Y;
+global int rasmus2Direction;
+global int bjarkeTronY;
+global int bjarkeTronX;
+global int bjarkeDirection;
+global int amountOfTrons;
+global string winner;
+global int countOfGames;
+global int maxGames;
+global int bjarkeWins;
+global int rasmusWins;
+global int rasmus2Wins;
+global int ties;
+global int rasmusML;
+global int ticks; 
+global int numOfTronsLeft;
+
+bool setup(){
+	
+	// SKAL OPDATERES
+	amountOfTrons = 0;
+	// Rasmus tron initial
+	rasmusX = randomInt(0,getWidth() -1);
+	rasmusY = randomInt(0,getHeight() -1);
+	rasmusDirection = randomInt(0,3);
+	setGridColor(rasmusX,rasmusY, "yellow");
+	amountOfTrons = amountOfTrons +1;
+	rasmusML = 0;
+	// John initial;
+	rasmus2X = randomInt(0,getWidth() -1);
+	rasmus2Y = randomInt(0,getHeight() -1);
+	rasmus2Direction = 1;
+//	setGridColor(rasmus2X,rasmus2Y, "cyan");
+	//amountOfTrons = amountOfTrons +1;
+	rasmusWins = 0;
+	rasmus2Wins = 0;
+	// Bjarke tron initial
+	bjarkeTronY = randomInt(0,getHeight()-1);
+	bjarkeTronX = randomInt(0,getWidth()-1);
+	bjarkeDirection = randomInt(0,3);
+	bjarkeWins = 0;
+	setGridColor(bjarkeTronX,bjarkeTronY, "red");
+	amountOfTrons = amountOfTrons +1;
+	
+	standardColor = getGridColor(5,5);
+	//println(standardColor);
+	countOfGames = 0;
+	maxGames = 1000;
+	setDelay(20);
+	ticks = 0;
+	numOfTronsLeft = amountOfTrons;
+	return true;
+}
+
+
+bool action(){
+	rasmus2Dead = true;
+	ticks = ticks + 1;
+	//setGridColor(randomInt(0,getWidth() -1), randomInt(0,getHeight() -1) , "pink");
+	if (numOfTronsLeft < 2)
+	{
+		roundFinished();
+	}
+	addInt(0);
+	addInt(1);
+	addInt(2);
+	int n;
+	n = getInt();
+	while(n >= 0)
+	{
+		if (n == 0)
+		{
+			if(!rasmusDead)
+			{
+				rasmusTron();
+			}
+		}
+		if (n == 1)
+		{
+			if(!bjarkeDead)
+			{
+				bjarkeTron();
+			}
+		}
+		if (n == 2)
+		{
+			if(!rasmus2Dead)
+			{
+			//	rasmus2Tron();
+			}
+		}
+		n = getInt();
+	}
+	
+	if (countOfGames >= maxGames) {
+		int k;
+		k = getHeighestNumOfWins(rasmusWins,bjarkeWins,rasmus2Wins,0,0,0);
+		if (k == rasmusWins)
+		{
+			println("RASMUS WINS THE ENTIRE THING!");
+		} 
+		else if (k == bjarkeWins)
+		{
+			println("BJARKE WINS THE ENTIRE THING!");
+		}
+		else if (k == rasmus2Wins)
+		{
+			println("JOHN WINS THE ENTIRE THING!");
+		}
+		return false;
+	}
+	return true;
+	
+}
+
+bool isOccopied( int inDir, int left){
+	if(rasmusDirection == 0){
+		return !getGridColor(rasmusX - left, rasmusY - inDir) == standardColor;
+	}
+	
+	if(rasmusDirection == 1){
+		return !getGridColor(rasmusX + inDir , rasmusY - left) == standardColor;
+	}
+	
+	if(rasmusDirection == 2){
+		return !getGridColor(rasmusX + left, rasmusY + inDir ) == standardColor;
+	}
+	
+	if(rasmusDirection == 3){
+		return !getGridColor(rasmusX - inDir, rasmusY + left) == standardColor;
+	}
+	println("erroE2");
+	return false;
+}
+
+
+int mod(int a, int n){
+	return (a - (n * (a /n)));
+}
+
+bool rasmusTron(){
+	int off; off = 4;
+	int one; int two; int three; int zero;
+	one = 0; two = 0; three = 0; zero = 0;
+	int c; c = 1;
+	int lookahead;
+	rasmusS = rasmusDirection;
+	bool rset; bool lset;
+	rset = false; lset = false;
+	int ol; int or;
+	ol = 35; or=35;
+	
+	while(c < 15){
+		if(isOccopied(0, c) && ol == 35){
+			ol = c;
+			lset = true;
+		//	println("left is " + intToString(c));
+		}
+		if(isOccopied(0, -c) && or == 35){
+			or = c;
+			rset = true;
+		//	println("righjt is " + intToString(c));
+		}
+		c = c + 1;
+	}
+	
+	
+	lookahead = 2;
+	
+	//println( intToString(rasmusDirection));
+	if(isOccopied(1, 0)){
+		//println(intToString(lookahead) + " tiles ahead(" + intToString(rasmusX) + "," + intToString(rasmusY) + " is occopied im dir " + intToString(rasmusDirection));
+		if(rasmusDirection == 0){
+			//println(intToString(ol) + "   " + intToString(or));
+			if(or > ol){
+					rasmusDirection = 1;	
+				} else {
+					rasmusDirection = 3;
+			}
+		} else {
+	
+		if(or < ol){
+			rasmusDirection = mod(rasmusDirection - 1,4);	
+		} else {
+			rasmusDirection = mod(rasmusDirection + 1,4);
+		}
+		}
+	} else if(isOccopied(2, 0)){
+		//println(intToString(lookahead) + " tiles ahead(" + intToString(rasmusX) + "," + intToString(rasmusY) + " is occopied im dir " + intToString(rasmusDirection));
+		if(or > 2 || ol > 2){
+			if(rasmusDirection == 0){
+				//println(intToString(ol) + "   " + intToString(or));
+				if(or > ol){
+						rasmusDirection = 1;	
+					} else {
+						rasmusDirection = 3;
+				}
+			} else {
+	
+		
+				if(or < ol){
+					rasmusDirection = mod(rasmusDirection - 1,4);	
+				} else {
+					rasmusDirection = mod(rasmusDirection + 1,4);
+				}
+			}
+		}
+		
+	}
+	else if(isOccopied(3, 0)){
+		
+		if(or > 3 || ol > 3){
+			if(rasmusDirection == 0){
+				//println(intToString(ol) + "   " + intToString(or));
+				if(or > ol){
+					rasmusDirection = 1;	
+				} else {
+					rasmusDirection = 3;
+				}
+			} else {
+			//println(intToString(lookahead) + " tiles ahead(" + intToString(rasmusX) + "," + intToString(rasmusY) + " is occopied im dir " + intToString(rasmusDirection));
+		
+				if(or < ol){
+					rasmusDirection = mod(rasmusDirection - 1,4);	
+				} else {
+					rasmusDirection = mod(rasmusDirection + 1,4);
+				}
+			}
+		
+		}
+	}
+	else if(isOccopied(4, 0)){
+		if(rasmusDirection != 3){
+		if(or > 4 || ol > 4){
+			if(rasmusDirection == 0){
+				//println(intToString(ol) + "   " + intToString(or));
+				if(or > ol){
+					rasmusDirection = 1;	
+				} else {
+					rasmusDirection = 3;
+				}
+			} else {
+			//println(intToString(lookahead) + " tiles ahead(" + intToString(rasmusX) + "," + intToString(rasmusY) + " is occopied im dir " + intToString(rasmusDirection));
+		
+				if(or < ol){
+					rasmusDirection = mod(rasmusDirection - 1,4);	
+				} else {
+					rasmusDirection = mod(rasmusDirection + 1,4);
+				}
+			}
+		
+		}
+		}
+	}
+	/*
+	
+	if(1 == 1){
+		if(!isOccopied(0,1) && !isOccopied(1,1) && !isOccopied(2,1) && !isOccopied(3,1) &&
+		!isOccopied(0,2) && !isOccopied(1,2) && !isOccopied(2,2) && !isOccopied(2,2) &&
+		!isOccopied(0,3) && !isOccopied(1,3) && !isOccopied(2,3) && !isOccopied(2,3) &&
+		isOccopied(0,4) && isOccopied(1,4) && isOccopied(2,4) && isOccopied(3,4) && rasmusC > 3 && 
+		!isOccopied(1,0) && !isOccopied(2,0) && !isOccopied(3,0) && !isOccopied(4,0)&& !isOccopied(6,0) && !isOccopied(5,0) && rasmusML == 0
+		){
+			rasmusDirection = mod(rasmusDirection + 1,4);
+			rasmusML = 30;
+		}
+	}
+	
+	if(1 == 1){
+		if(!isOccopied(0,-1) && !isOccopied(1,-1) && !isOccopied(2,-1) && !isOccopied(3,-1) &&
+		!isOccopied(0,-2) && !isOccopied(1,-2) && !isOccopied(2,-2) && !isOccopied(2,-2) &&
+		!isOccopied(0,-3) && !isOccopied(1,-3) && !isOccopied(2,-3) && !isOccopied(2,-3) &&
+		isOccopied(0,-4) && isOccopied(1,-4) && isOccopied(2,-4) && isOccopied(3,-4) && rasmusC > 3 &&
+		!isOccopied(1,0) && !isOccopied(2,0) && !isOccopied(3,0) && !isOccopied(4,0) && !isOccopied(6,0) &&!isOccopied(5,0) && rasmusML == 0
+		){
+			rasmusDirection = mod(rasmusDirection + 1,4);
+			rasmusML = 50;
+		}
+	}
+	
+	
+	if(rasmusML == 30){
+		rasmusDirection = mod(rasmusDirection - 1,4);
+		rasmusML = 40;
+		
+	}
+	if(rasmusML == 40){
+		rasmusDirection = mod(rasmusDirection - 1,4);
+		rasmusML = 70;
+		
+	}
+	if(rasmusML == 70){
+		rasmusDirection = mod(rasmusDirection + 1,4);
+		rasmusML = 0;
+		
+	}
+	
+	if(rasmusML == 50 ){
+		rasmusDirection = mod(rasmusDirection - 1,4);
+		rasmusML = 60;
+	}
+	if(rasmusML == 60){
+		rasmusDirection = mod(rasmusDirection - 1,4);
+		rasmusML = 80;
+	}
+	if(rasmusML == 80){
+		rasmusDirection = mod(rasmusDirection + 1,4);
+		rasmusML = 0;
+	}
+	//rasmusDirection = getLowest(zero, one, two, three);
+	//println("up: " + intToString(zero) + "right: " + intToString(one) + "down: " +intToString(two) + "left: " + intToString(three) + " rasmusDirection " + intToString(rasmusDirection));
+	*/
+	int i;
+	i = 0;
+	while(i < 5){
+		if(getGridColor(rasmusX + 1, rasmusY) == standardColor && rasmusDirection == 1)
+		{
+			setGridColor(rasmusX + 1, rasmusY, "yellow");	
+			rasmusX = rasmusX + 1;
+			if(rasmusS == 1){
+				rasmusC = rasmusC + 1;
+			} else {
+				rasmusC = 0;
+			} 
+			return true;
+		} 
+		else if(getGridColor(rasmusX, rasmusY + 1) == standardColor  && rasmusDirection == 2)
+		{
+			setGridColor(rasmusX , rasmusY + 1, "yellow");
+			rasmusY = rasmusY + 1;
+			if(rasmusS == 2){
+				rasmusC = rasmusC + 1;
+			} else {
+				rasmusC = 0;
+			} 	
+			return true;
+		}
+		 else if(getGridColor(rasmusX -1, rasmusY ) == standardColor && rasmusDirection == 3)
+		{
+			setGridColor(rasmusX -1 , rasmusY, "yellow");	
+			rasmusX = rasmusX - 1;
+			if(rasmusS == 3){
+				rasmusC = rasmusC + 1;
+			} else {
+				rasmusC = 0;
+			} 
+			return true;
+		} 
+		else if(getGridColor(rasmusX, rasmusY - 1) == standardColor &&rasmusDirection == 0)
+		{
+			setGridColor(rasmusX , rasmusY - 1, "yellow");
+			rasmusY = rasmusY - 1;
+			if(rasmusS == 0){
+				rasmusC = rasmusC + 1;
+			} else {
+				rasmusC = 0;
+			} 	
+			return true;
+		} 
+		i = i + 1;
+		rasmusDirection = rasmusDirection + 1;
+		if(rasmusDirection > 3){
+			rasmusDirection = 0;
+		}
+		if(i > 4){
+			setGridColor(rasmusX , rasmusY, "white");
+			rasmusDead = true;
+			rasmusML = 0;
+			numOfTronsLeft = numOfTronsLeft -1;
+			return false;
+		}
+	}
+	
+
+	return true;
+}
+
+
+int getHighest3(int q, int w, int e){
+	int ch; ch = q;
+	
+	if(ch < w){
+		
+		ch = w;
+	} 
+	if(ch < e ){
+	 	
+		ch = e;
+	}
+
+	if(ch == q){
+		return 0;
+	}
+	if(ch == w){
+		return 1;
+	}
+	if(ch == e){
+		return 2;
+	}
+	
+	return 0;
+}
+
+bool bjarkeTron()
+{	
+	bool tried1; bool tried2; bool tried3; bool tried4;
+	tried1 = false; tried2 = false;	tried3 = false;	tried4 = false;
+	int one; int two; int three; int four;
+	int oneWall; int twoWall; int threeWall; int fourWall;
+	int c;
+	int la;
+	la = 50;//randomInt(7,10);
+	c = 1;
+	while (c<la+1) 
+	{
+		if (getGridColor(bjarkeTronX,bjarkeTronY+c) == standardColor)
+		{
+			if (oneWall < 1)
+			{
+				one = one +1;
+			}
+		}
+		else {
+			oneWall = 1;
+		}
+		if (getGridColor(bjarkeTronX+c,bjarkeTronY) == standardColor)
+		{
+			if (twoWall < 1)
+			{
+				two = two +1;
+			}
+		}
+		else {
+			twoWall = 1;
+		}
+		if (getGridColor(bjarkeTronX,bjarkeTronY-c) == standardColor)
+		{
+			if (threeWall < 1)
+			{
+				three = three +1;
+			}
+		}
+		else {
+			threeWall = 1;
+		}
+		if (getGridColor(bjarkeTronX-c,bjarkeTronY) == standardColor)
+		{
+			if (fourWall < 1)
+			{
+				four = four +1;
+			}
+		}
+		else {
+			fourWall = 1;
+		}
+		c = c+1;
+	}
+	bool triedmove0; bool triedmove1; bool triedmove2; bool triedmove3;
+	triedmove0 = false; triedmove1 = false; triedmove2 = false; triedmove3 = false;
+	int counter;
+	counter = 0;
+	while (counter <= 4) 
+	{	
+		if (bjarkeDirection == 0) 
+		{
+			if(bjarkeMoveTron(0,1,triedmove0,2))
+			{
+				return true;	
+			}
+			else
+			{	
+				triedmove0 = true;
+				if (two > four) 
+				{
+					bjarkeDirection = 1;
+				}
+				else
+				{
+					bjarkeDirection = 3;
+				}
+				if (triedmove0)
+				{
+					counter = counter +1;
+				}
+			}
+		}
+		else if (bjarkeDirection == 1) 
+		{
+			if(bjarkeMoveTron(1,0,triedmove1,2))
+			{
+				return true;
+			}
+			else
+			{
+				triedmove1 = true;
+				if (one > three) 
+				{
+					bjarkeDirection = 0;
+				}
+				else
+				{
+					bjarkeDirection = 2;
+				}
+				if (triedmove1)
+				{
+					counter = counter +1;
+				}
+			}
+		}
+		else if (bjarkeDirection == 2) 
+		{
+			if(bjarkeMoveTron(0,-1,triedmove2,2))
+			{
+				return true;
+			}
+			else
+			{
+				triedmove2 = true;
+				if (two > four) 
+				{
+					bjarkeDirection = 1;
+				}
+				else
+				{
+					bjarkeDirection = 3;
+				}
+				if (triedmove2)
+				{	
+					counter = counter +1;
+				}
+			}
+		}
+		else if (bjarkeDirection == 3) 
+		{
+			if(bjarkeMoveTron(-1,0,triedmove3,2))
+			{
+				return true;
+			}
+			else
+			{	
+				triedmove3 = true;
+				
+				if (one > three) 
+				{
+					bjarkeDirection = 0;
+				}
+				else
+				{
+					bjarkeDirection = 2;
+				}
+				if (triedmove3)
+				{
+					counter = counter +1;
+				}
+			}
+		}
+	}
+	setGridColor(bjarkeTronX,bjarkeTronY,"white");
+	bjarkeDead = true;
+	numOfTronsLeft = numOfTronsLeft -1;
+	return false;
+}
+
+bool frontBlocked(int n)
+{	
+	int frontX;	int frontY;
+	bool left; bool right;
+	if (bjarkeDirection == 0)
+	{
+		frontX = bjarkeTronX;
+		frontY = bjarkeTronY+n;
+		if (getGridColor(frontX,frontY) == standardColor)
+		{
+			if (getGridColor(frontX-1, frontY) == standardColor)
+			{
+				left = true;
+			}
+			else
+			{
+			}
+			if (getGridColor(frontX+1, frontY) == standardColor)
+			{
+				right = true;
+			}
+			else
+			{
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else if (bjarkeDirection == 1)
+	{
+		frontX = bjarkeTronX+n;
+		frontY = bjarkeTronY;
+		if (getGridColor(frontX,frontY) == standardColor)
+		{
+			if (getGridColor(frontX, frontY+1) == standardColor)
+			{
+				left = true;
+			}
+			else
+			{
+			}
+			if (getGridColor(frontX, frontY-1) == standardColor)
+			{
+				right = true;
+			}
+			else
+			{
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else if (bjarkeDirection == 2)
+	{
+		frontX = bjarkeTronX;
+		frontY = bjarkeTronY-n;
+		if (getGridColor(frontX,frontY) == standardColor)
+		{
+			if (getGridColor(frontX+1, frontY) == standardColor)
+			{
+				left = true;
+			}
+			else
+			{
+			}
+			if (getGridColor(frontX-1, frontY) == standardColor)
+			{
+				right = true;
+			}
+			else
+			{
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else if (bjarkeDirection == 3)
+	{
+		frontX = bjarkeTronX-n;
+		frontY = bjarkeTronY;
+		if (getGridColor(frontX,frontY) == standardColor)
+		{
+			if (getGridColor(frontX, frontY-1) == standardColor)
+			{
+				left = true;
+			}
+			else
+			{
+			}
+			if (getGridColor(frontX, frontY+1) == standardColor)
+			{
+				right = true;
+			}
+			else
+			{
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
+	if (left || right)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+bool bjarkeMoveTron(int n, int m, bool blockage, int step)
+{
+	int tmpx;
+	int tmpy;
+	tmpx = bjarkeTronX +n;
+	tmpy = bjarkeTronY +m;
+	string nextGridColor;
+	nextGridColor = getGridColor(tmpx, tmpy);
+	if (nextGridColor == standardColor)
+	{
+		if (!blockage) 
+		{
+			if (frontBlocked(step))
+			{
+				return false;
+			}
+			else
+			{
+				bjarkeTronX = tmpx;
+				bjarkeTronY = tmpy;
+				setGridColor(bjarkeTronX, bjarkeTronY, "red");
+				return true;
+			}
+		}
+		else
+		{
+			bjarkeTronX = tmpx;
+			bjarkeTronY = tmpy;
+			setGridColor(bjarkeTronX, bjarkeTronY, "red");
+			return true;
+		}
+	}
+	else
+	{
+		return false;
+	}
+}
+
+int getHeighestNumOfWins(int a, int b, int c, int d, int e, int f) {
+	int ch;
+	ch = a;
+	
+	if (ch < b)
+	{
+		ch = b;
+	}
+	if (ch < c)
+	{
+		ch = c;
+	}
+	if (ch < d)
+	{
+		ch = d;
+	}
+	if (ch < e)
+	{
+		ch = e;
+	}
+	if (ch < f)
+	{
+		ch = f;
+	}
+	return ch;
+}
+
+
+
+bool rasmus2Tron(){
+	int off; off = 1;
+	int one; int two; int three; int zero;
+	int one1; int two1; int three1; int zero1;
+	one = 0; two = 0; three = 0; zero = 0;
+	one1 = 0; two1 = 0; three1 = 0; zero1 = 0;
+	int c; c = 0;
+	while(c < 7){
+		if(getGridColor(rasmus2X + c, rasmus2Y) == standardColor && one1 == 0){
+			one =  c ;//one + 1;
+		} else {
+			one1 = 1;
+		}
+		if(getGridColor(rasmus2X, rasmus2Y + c) == standardColor && two1 == 0){
+			two = c;//two + 1;
+		} else {
+			two1 = 1;
+		}
+		if(getGridColor(rasmus2X - c, rasmus2Y) == standardColor && three1 == 0){
+			three =c;// three + 1;
+		} else {
+			two1 = 1;
+		}
+		if(getGridColor(rasmus2X , rasmus2Y - c) == standardColor && zero1 == 0){
+			zero = c;//zero + 1;
+		} else {
+			two1 = 1;
+		}
+		c = c + 1;
+	}
+	
+	if(rasmus2Direction == 0){
+		int hz; hz = getHighest3(zero,one, three);
+		
+		if(hz == 0){
+			if(one - off > zero){
+				rasmus2Direction = 1;
+			} else if(three - off > zero){
+				rasmus2Direction = 3;
+			} else {
+			rasmus2Direction  = 0;
+		}
+		}
+		if(hz == 1){
+			rasmus2Direction = 1;
+		} 
+		 if(hz == 2){
+			rasmus2Direction = 3;
+		} 
+		
+	}
+	if(rasmus2Direction == 1){
+		int hz; hz = getHighest3(one, zero, two);
+		
+		if(hz == 0){
+			if(zero - off > one){
+				rasmus2Direction = 0;
+			} else 	if(two - off > one){
+				rasmus2Direction = 2;
+			} else {
+				rasmus2Direction = 1;
+			}
+		}
+		if(hz == 1){
+			rasmus2Direction = 0;
+		}
+		if(hz == 2){
+			rasmus2Direction = 2;
+		}
+	}
+	if(rasmus2Direction == 2){
+			int hz; hz = getHighest3(two, one, three);
+		
+		if(hz == 0){
+			if(one - off > two){
+				rasmus2Direction = 1;
+			} else 	if(three - off > two){
+				rasmus2Direction = 3;
+			} else {
+				rasmus2Direction = 2;
+			}
+		}
+		if(hz == 1){
+			rasmus2Direction = 1;
+		}
+		if(hz == 2){
+			rasmus2Direction = 3;
+		}
+	}
+	if(rasmus2Direction == 3){
+		int hz; hz = getHighest3(three, zero, two);
+		
+		if(hz == 0){
+			if(zero - off > three){
+				rasmus2Direction = 0;
+			} else 	if(two - off > three){
+				rasmus2Direction = 2;
+			} else {
+				rasmus2Direction = 3;
+			}
+		}
+		if(hz == 1){
+			rasmus2Direction = 0;
+		}
+		if(hz == 2){
+			rasmus2Direction = 2;
+		}
+	}
+	
+	
+	
+	
+	
+	
+	//rasmus2Direction = getLowest(zero, one, two, three);
+	//println("up: " + intToString(zero) + "right: " + intToString(one) + "down: " +intToString(two) + "left: " + intToString(three) + " rasmus2Direction " + intToString(rasmus2Direction));
+	
+	int i;
+	i = 0;
+	while(i < 5){
+		if(getGridColor(rasmus2X + 1, rasmus2Y) == standardColor && rasmus2X <= getWidth() -1 && rasmus2Direction == 1)
+		{
+			setGridColor(rasmus2X + 1, rasmus2Y, "cyan");	
+			rasmus2X = rasmus2X + 1;
+			return true;
+		} 
+		else if(getGridColor(rasmus2X, rasmus2Y + 1) == standardColor && rasmus2Y <= getWidth() -1 && rasmus2Direction == 2)
+		{
+			setGridColor(rasmus2X , rasmus2Y + 1, "cyan");
+			rasmus2Y = rasmus2Y + 1;	
+			return true;
+		}
+		 else if(getGridColor(rasmus2X -1, rasmus2Y ) == standardColor && rasmus2X > 0 && rasmus2Direction == 3)
+		{
+			setGridColor(rasmus2X -1 , rasmus2Y, "cyan");	
+			rasmus2X = rasmus2X - 1;
+			return true;
+		} 
+		else if(getGridColor(rasmus2X, rasmus2Y - 1) == standardColor && rasmus2Y > 0 && rasmus2Direction == 0)
+		{
+			setGridColor(rasmus2X , rasmus2Y - 1, "cyan");
+			rasmus2Y = rasmus2Y - 1;	
+			return true;
+		} 
+		i = i + 1;
+		rasmus2Direction = rasmus2Direction + 1;
+		if(rasmus2Direction > 3){
+			rasmus2Direction = 0;
+		}
+		if(i > 4){
+			setGridColor(rasmus2X , rasmus2Y, "white");
+			rasmus2Dead = true;
+			numOfTronsLeft = numOfTronsLeft -1;
+			return false;
+		}
+	}
+	
+
+	return true;
+}
+
+bool roundFinished()
+{
+	if(numOfTronsLeft < 1)
+	{
+		ties = ties +1;
+		winner = "Tie";
+	}
+	else
+	{
+		if(!rasmusDead)
+		{
+			winner = "Rasmus";
+		}
+		if(!bjarkeDead)
+		{
+			winner = "Bjarke";
+		}
+		if(!rasmus2Dead)
+		{
+			winner = "John";
+		}
+	}
+	println("The winner is " + winner);
+	if (winner == "Rasmus")
+	{
+		rasmusWins = rasmusWins +1;
+	}
+	if (winner == "Bjarke")
+	{
+		bjarkeWins = bjarkeWins +1;
+	}
+	if (winner == "John")
+	{
+		rasmus2Wins = rasmus2Wins +1;
+	}
+	println("Rasmus' Wins: " + intToString(rasmusWins) + ". Bjarkes Wins: " + intToString(bjarkeWins) + ". Ties: " + intToString(ties) + ".");
+	countOfGames = countOfGames +1;
+	clearGrid();
+	bjarkeDead = false;
+	rasmusDead = false;
+	//rasmus2Dead = false;
+	bjarkeTronY = randomInt(0,getHeight()-1);
+	bjarkeTronX = randomInt(0,getWidth()-1);
+	bjarkeDirection = randomInt(0,3);
+	setGridColor(bjarkeTronX,bjarkeTronY, "red");
+	rasmusX = randomInt(0,getWidth() -1);
+	rasmusY = randomInt(0,getHeight() -1);
+	rasmusDirection = randomInt(0,3);
+	setGridColor(rasmusX,rasmusY, "yellow");
+	rasmus2X = randomInt(0,getWidth() -1);
+	rasmus2Y = randomInt(0,getHeight() -1);
+	rasmus2Direction = randomInt(0,3);
+	//setGridColor(rasmus2X,rasmus2Y, "cyan");
+	numOfTronsLeft = amountOfTrons;
+	ticks = 0;
+	
+	return true;
+}

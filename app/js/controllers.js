@@ -5,10 +5,18 @@
 angular.module('bjarkehs.controllers', []).
   controller('Home', ['$scope','$filter', 'Outlet', 'Project', 'Tweet', function($scope, $filter, Outlet, Project, Tweet) {
     $scope.parts = [
-        "partials/welcome.html",
-        "partials/news.html",
-        "partials/follow.html",
-        "partials/contact.html"
+        {
+            url:"partials/welcome.html"
+        },
+        {
+            url:"partials/news.html"
+        },
+        {
+            url:"partials/follow.html"
+        },
+        {
+            url:"partials/contact.html"
+        }
     ];
     $scope.outlets = Outlet.query();
     $scope.projects = Project.query();
