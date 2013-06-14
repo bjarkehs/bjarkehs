@@ -1,11 +1,11 @@
 'use strict';
 
+var app = angular.module('bjarkehs.directives', []);
+
 /* Directives */
 
-
-angular.module('bjarkehs.directives', [])
-  .directive('appVersion', ['version', function(version) {
+app.directive('appVersion', ['version', function(version) {
     return function(scope, elm, attrs) {
-      elm.text(version);
+        elm.text(version);
     };
-  }]);
+}]);

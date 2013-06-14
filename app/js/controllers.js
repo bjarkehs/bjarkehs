@@ -1,38 +1,33 @@
 'use strict';
 
+var app = angular.module('bjarkehs.controllers', []);
+
 /* Controllers */
 
-angular.module('bjarkehs.controllers', []).
-  controller('Home', ['$scope','$filter', 'Outlet', 'Project', 'Tweet', function($scope, $filter, Outlet, Project, Tweet) {
-    $scope.parts = [
-        {
-            url:"partials/welcome.html"
-        },
-        {
-            url:"partials/news.html"
-        },
-        {
-            url:"partials/follow.html"
-        },
-        {
-            url:"partials/contact.html"
-        }
-    ];
-    $scope.outlets = Outlet.query();
-    $scope.projects = Project.query();
-    $scope.tweets = Tweet.query();
-    $scope.limit = 5;
-    $scope.dateOrder = true;
+app.controller('WelcomeCtrl', [function() {
 
-    $scope.toggleOrder = function(current) {
-        if (current) {
-            $scope.dateOrder = false;
+}]);
+
+app.controller('NewsCtrl', ['$scope', 'Project', function($scope, Project) {
+    $scope.projects = Project.query();
+    $scope.i = 0;
+    $scope.details = false;
+
+    $scope.toggleDetails = function toggleDetails(details) {
+        if (details) {
+            return false;
         }
         else {
-            $scope.dateOrder = true;
+            return true;
         }
-    };
-  }])
-  .controller('MyCtrl2', [function() {
+    }
+}]);
 
-  }]);
+app.controller('FollowCtrl', ['$scope', 'Outlet', 'Tweet', function($scope, Outlet, Tweet) {
+    $scope.outlets = Outlet.query();
+    $scope.tweets = Tweet.query();
+}]);
+
+app.controller('ContactCtrl', [function() {
+
+}]);

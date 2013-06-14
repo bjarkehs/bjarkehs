@@ -1,6 +1,6 @@
 <h3>Tweets</h3>
 <ul>
-    <li ng-repeat="tweet in tweets | limitTo:5">
+    <li ng-repeat="tweet in tweets | limitTo:4">
         <span ng-bind-html="tweet.text | twitterify"></span> - {{ tweet.created_at | twitterToTimestamp | date:"EEE, MMM d yyyy, H:mm:ss" }}
     </li>
 </ul>
