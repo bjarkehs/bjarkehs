@@ -1,5 +1,9 @@
-<h2>Follow Me</h2>
-<div ng-repeat="outlet in outlets">
-    <a ng-href="{{outlet.url}}" title="{{outlet.title}}">{{outlet.name}}</a>
-</div>
-<div ng-include="'partials/twitter.html'"></div>
+<article class="index">
+    <h2>Follow Me</h2>
+    <div style="text-align:center; margin: 2em 0;">
+        <ul class="follow">
+            <li ng-repeat="outlet in outlets | orderBy:'order'" ><a ng-href="{{outlet.url}}" target="_blank"><img ng-src="{{outlet.img}}" alt="{{outlet.title}}" title="{{outlet.title}}" /></a></li>
+        </ul>
+    </div>
+    <div ng-include="'partials/twitter.html'"></div>
+</article>

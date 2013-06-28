@@ -1,30 +1,147 @@
-/* app css stylesheet */
+/* oh yes fonts */
+@import url(http://fonts.googleapis.com/css?family=Revalia);
+@import url(http://fonts.googleapis.com/css?family=Lusitana:400,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway:300);
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+/* reset this bitch */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* now make it pretty */
+html, body{
+	height: 100%;
+}
+body {
+	background: #eeeeee;
+	font-family: 'Lusitana';
+	font-weight: 400;
+	font-size: 1.3em;
+	color: #5B5B5B;
+}
+h1, h2, h3 { margin: 0; padding: 0; }
+h1 { font-size: 2em;	font-family: 'Raleway'; }
+h2 { font-size: 1.5em; font-family: 'Raleway'; }
+h3 { font-size: 1.2em; font-family: 'Raleway'; }
+h4 { font-size: 0.9em; font-family: 'Raleway';  }
+p, ol, ul{ margin-top: 1.5em; }
+p{ line-height: 180%; }
+
+a {
+	color: #B82D3A;
+	text-decoration: none;
+	border-bottom: 1px dashed;
+}
+a:hover {
+	color: #d5858d;
 }
 
-.menu:before {
-  content: "[";
-}
+#wrapper { width: 100%; }
+.clear { clear: both; }
 
-.menu:after {
-  content: "]";
+/* header, just the tip */
+.masthead {
+	margin: 2.5em auto;
+	background: #fff;
+	padding: 0em 0 2em 0;
+	width: 100%;
+	min-width: 960px;
+	text-align: center; border-bottom: 5px solid #B82D3A;
 }
-
-.menu > li {
-  display: inline;
+.masthead .container {
+	display: inline-block;
+	text-align: center;
 }
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+.masthead h1 {
+	font-size: 3.5em;
+	font-family: 'Raleway', sans-serif;
 }
-
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+.masthead #h {
+	font-size: 1.75em;
+	font-family: 'Revalia';
+	position: relative;
+	top: 0.15em;
+	color: #40889E;
+}
+.masthead .container ul li {
+	display: inline-block;
+	margin: 1em;
+	font-size: 1.0em;
+}
+.masthead .container ul li a{
+	display: inline-block;
+}
+/* article */
+.index {
+	margin: 0 auto;
+	width: 50%;
+	min-width: 960px;
+	padding: 0 0 1em 0;
+	border-bottom: 1px solid #d2d0cd;
+}
+article h2 {
+	padding: 1em 0 0 0;
+	color: #9f9f9f;
+}
+.news_item {
+	margin: 1em 0;
+	width: 45%;
+	float: left;
+	font-size: 0.8em;
+}
+.odd { margin-right: 5%; clear: left; }
+.news_item .news_info {
+	font-size: 0.7em;
+	margin:0;
+}
+.news_item p {
+	margin-bottom: 1em;
+}
+.news_item h3 {
+	color: #40889E;
+	margin: 0.5em 0;
+}
+.news_item h4 {
+	margin: 0.5em 0;
+}
+.news_item ul {
+	margin-top: 1em;
+}
+.news_item ul li {
+	list-style-type:circle;
+	list-style-position:inside;
+	font-size: 0.9em;
+}
+.news_item ul li a {
+	color: #B82D3A;
+	text-decoration: none;
+	border-bottom: 0px;
+}
+ul.follow li {
+	display: inline-block;
+	margin: 0 0.5em;
+}
+ul.follow li a { border: 0; }
+/* feetsies */
+.footer {
+	margin: 2.5em auto;
+	background: #40889E;
+	padding: 1em 0 2em 0;
+	width: 100%;
+	min-width: 960px;
+	text-align: center;
+	color: #eeeeee;
+}
+/* form elements */
+input, textarea {
+	background: #e0e0e0;
+	border: 1px solid #d8d8d8;
+	color: #888888;
+	padding: 1em;
+	margin-bottom: 1.5em;
+	width: 500px;
+	font-size: 0.8em;
+	font-family: 'Raleway', sans-serif;
+}
+input.submit {
+	background: #B82D3A;
+	color: #eee;
 }

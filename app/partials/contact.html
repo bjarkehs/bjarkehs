@@ -1,5 +1,19 @@
-<h2>Contact Info</h2>
-<img alt="Me..." ng-src="img/profile.jpg" width="100px" title="Me" />
-<p>Email: <a href="mailto:kontakt@bjarkehs.dk">kontakt@bjarkehs.dk</a></p>
-<p>Mobile: +45 2548 6026</p>
-<p>When is my best chance to get a hold of you? Between 16:00 and 23:00</p>
+<article class="index">
+    <h2>Contact Info</h2>
+    <br />
+    <div style="float:left; width:350px;">
+        <img ng-src="img/profile_picture.jpg" style="width:300px;" /><br />
+        <p>Email: <a href="mailto:kontakt@bjarkehs.dk">kontakt@bjarkehs.dk</a><br />
+        Mobile: +45 2548 6026<br />
+        <span style="font-size:0.8em;">When is my best chance to get a hold of you? Between 16:00 and 23:00</span></p>
+    </div>
+    <div style="text-align:right;">Or fill out this form with name, email, and message...<br />
+        <form>
+            <input type="text" name="name" placeholder="What is your name?"><br />
+            <input type="text" name="contact" placeholder="How do I contact you?"><br />
+            <textarea rows="10" cols="30" placeholder="What can I help you with?"></textarea><br />
+            <input type="submit" value="Submit" class="submit">
+        </form>
+    </div>
+    <div class="clear"></div>
+</article>

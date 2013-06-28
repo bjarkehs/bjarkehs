@@ -3,19 +3,36 @@
 <head>
     <meta charset="utf-8">
     <title>BjarkeHS.dk</title>
-    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
+    <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 <body>
-    <div ng-controller="WelcomeCtrl" ng-include="'partials/welcome.html'">
-    </div>
-    <div ng-controller="NewsCtrl" ng-include="'partials/news.html'">
-    </div>
-    <div ng-controller="FollowCtrl" ng-include="'partials/follow.html'">
-    </div>
-    <div ng-controller="ContactCtrl" ng-include="'partials/contact.html'">
-    </div>
+    <a href="https://github.com/bjarkehs"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <div id="wrapper">
+        <header class="masthead">
+            <div class="container">
+                <h1>Bjarke<span id="h">H</span>Søndergaard</h1>
+                <ul>
+                    <li><a href="#">Hello</a></li>
+                    <li><a href="#">News Feed</a></li>
+                    <li><a href="#">Follow Me</a></li>
+                    <li><a href="#">Contact Info</a></li>
+                </ul>
+            </div>
+        </header>
+        <div ng-controller="WelcomeCtrl" ng-include="'partials/welcome.html'">
+        </div>
+        <div ng-controller="NewsCtrl" ng-include="'partials/news.html'">
+        </div>
+        <div ng-controller="FollowCtrl" ng-include="'partials/follow.html'">
+        </div>
+        <div ng-controller="ContactCtrl" ng-include="'partials/contact.html'">
+        </div>
 
-    <div id="footer">Bjarke Søndergaard &copy; 2011-2013</div>
+        <footer class="footer">
+            <div class="container"><p align="center">Bjarke H Søndergaard &copy; 2011-2013</p></div>
+        </footer>
+    </div>
 
     <!-- In production use:
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
