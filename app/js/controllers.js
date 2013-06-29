@@ -47,3 +47,11 @@ app.controller('DialogCtrl', ['$scope', 'dialog', function($scope, dialog) {
         dialog.close();
     };
 }]);
+
+app.controller('ContainerCtrl', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll) {
+    $scope.scrollTo = function(id) {
+        $('html, body').stop().animate({
+            scrollTop: $("#"+id).offset().top
+        }, 2000,'easeInOutExpo');
+    };
+}]);
