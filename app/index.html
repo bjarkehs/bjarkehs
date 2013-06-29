@@ -12,7 +12,7 @@
         <header class="masthead" ng-controller="ContainerCtrl">
             <div class="container">
                 <h1>Bjarke<span id="h">H</span>Søndergaard</h1>
-                <ul>
+                <ul ui-scrollfix>
                     <li><a href="" ng-click="scrollTo('welcome')">Hello</a></li>
                     <li><a href="" ng-click="scrollTo('news')">News Feed</a></li>
                     <li><a href="" ng-click="scrollTo('follow')">Follow Me</a></li>
@@ -39,6 +39,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-resource.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-sanitize.js"></script>
     <script src="lib/ui-bootstrap-custom-0.4.0.min.js"></script>
+    <script src="lib/scrollfix.js"></script>
     <script src="js/app.js"></script>
     <script src="js/services.js"></script>
     <script src="js/controllers.js"></script>

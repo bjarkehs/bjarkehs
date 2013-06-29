@@ -297,3 +297,10 @@ p.validation.error {
 .success {
     color: #5bb75b;
 }
+
+/* Misc position */
+
+.ui-scrollfix {
+    top: 0;
+    position: fixed;
+}
