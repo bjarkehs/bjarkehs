@@ -15,7 +15,7 @@ $requestMethod = 'GET';
 $twitter = new TwitterAPIExchange($settings);
 $result = $twitter->setGetfield($getfield)->buildOauth($url, $requestMethod)->performRequest();
 
-$file = fopen("app/twitter.json", "w");
+$file = fopen("../twitter.json", "w");
 fwrite($file, $result);
 fclose($file);
 

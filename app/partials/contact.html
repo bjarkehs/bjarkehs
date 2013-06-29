@@ -8,11 +8,11 @@
         <span style="font-size:0.8em;">When is my best chance to get a hold of you? Between 16:00 and 23:00</span></p>
     </div>
     <div style="text-align:right;">Or fill out this form with name, email, and message...<br />
-        <form>
-            <input type="text" name="name" placeholder="What is your name?"><br />
-            <input type="text" name="contact" placeholder="How do I contact you?"><br />
-            <textarea rows="10" cols="30" placeholder="What can I help you with?"></textarea><br />
-            <input type="submit" value="Submit" class="submit">
+        <form novalidate ng-submit="sendMail(contact)" name="contactForm" class="form">
+            <input type="text" placeholder="What is your name?" ng-model="contact.name" required><br />
+            <input type="email" placeholder="How do I contact you?" ng-model="contact.email" required><br />
+            <textarea rows="10" cols="30" placeholder="What can I help you with?" ng-model="contact.message" ng-required="true"></textarea><br />
+            <input type="submit" value="Submit" class="submit" ng-disabled="contactForm.$invalid">
         </form>
     </div>
     <div class="clear"></div>

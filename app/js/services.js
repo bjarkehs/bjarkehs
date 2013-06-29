@@ -20,4 +20,9 @@ angular.module('bjarkehs.services', ['ngResource'])
     return $resource('twitter.json', {}, {
       query: {method: 'GET', isArray:true}
     });
+  }])
+  .factory('Mail', ['$resource', function($resource) {
+    return $resource('../scripts/sendMail.php', {}, {
+      send: {method: 'POST'}
+    });
   }]);
