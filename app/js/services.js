@@ -22,7 +22,7 @@ angular.module('bjarkehs.services', ['ngResource'])
     });
   }])
   .factory('Mail', ['$resource', function($resource) {
-    return $resource('../scripts/sendMail.php', {}, {
+    return $resource('scripts/sendMail.php', {}, {
       send: {method: 'POST'}
     });
   }]);

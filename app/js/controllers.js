@@ -17,7 +17,7 @@ app.controller('FollowCtrl', ['$scope', 'Outlet', 'Tweet', function($scope, Outl
     $scope.tweets = Tweet.query();
 }]);
 
-app.controller('ContactCtrl', ['$scope', '$dialog', function($scope, $dialog) {
+app.controller('ContactCtrl', ['$scope', '$dialog', 'Mail', function($scope, $dialog, Mail) {
     $scope.initialContact = {};
     $scope.contact = angular.copy($scope.initialContact);
 
@@ -34,11 +34,9 @@ app.controller('ContactCtrl', ['$scope', '$dialog', function($scope, $dialog) {
         d.open();
     };
 
-    $scope.openDialog();
-
     $scope.sendMail = function sendMail(contact) {
         $scope.contact = angular.copy($scope.initialContact);
-
+        Mail.send({name: contact.name, email: contact.email, message: contact.message});
         $scope.openDialog();
     };
 

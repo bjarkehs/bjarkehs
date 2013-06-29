@@ -154,6 +154,14 @@ input.submit {
     outline-color: #5bb75b;
 }
 
+p.validation.error {
+    margin: -20px 0 15px 0;
+    padding: 0;
+    font-size: 0.7em;
+    line-height: 100%;
+    color: #B82D3A;
+}
+
 /* Modal stuff */
 
 .modal-backdrop {

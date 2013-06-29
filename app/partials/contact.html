@@ -10,7 +10,8 @@
     <div style="text-align:right;">Or fill out this form with name, email, and message...<br />
         <form novalidate ng-submit="sendMail(contact)" name="contactForm" class="form">
             <input type="text" placeholder="What is your name?" ng-model="contact.name" required><br />
-            <input type="email" placeholder="How do I contact you?" ng-model="contact.email" required><br />
+            <input name="email" type="email" placeholder="How do I contact you?" ng-model="contact.email" required><br />
+            <p ng-show="contactForm.email.$dirty && contactForm.email.$invalid && contactForm.email.$error.email" class="validation error">Please provide a valid email</p>
             <textarea rows="10" cols="30" placeholder="What can I help you with?" ng-model="contact.message" ng-required="true"></textarea><br />
             <input type="submit" value="Submit" class="submit" ng-disabled="contactForm.$invalid">
         </form>
