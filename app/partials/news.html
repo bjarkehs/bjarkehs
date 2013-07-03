@@ -1,5 +1,5 @@
 <article class="index">
-    <h2>News Feed</h2>
+    <h2>Projects</h2>
     <div ng-repeat="project in projects | orderBy:'date':true" class="news_item" ng-class-odd="'odd'">
         <h3>{{project.title}}</h3>
         <h4 ng-show="project.subtitle != ''">{{project.subtitle}}<span ng-show="project.language != 'english'"> (In {{project.language | capitalize}})</span></h4>

@@ -298,9 +298,22 @@ p.validation.error {
     color: #5bb75b;
 }
 
-/* Misc position */
+/* Misc */
 
-.ui-scrollfix {
+.toTop {
+    position: fixed;
+    font-size: 0.7em;
+    bottom: 1em;
+    right: 2.5em;
+    padding: 10px;
+    background: #B82D3A;
+}
+
+.toTop a {
+    color: #eeeeee;
+}
+
+/*.ui-scrollfix {
     top: 0;
     position: fixed;
-}
+}*/

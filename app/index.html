@@ -6,15 +6,15 @@
     <link rel="stylesheet" href="css/app.css" type="text/css"/>
     <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
-<body>
+<body id="top">
     <a href="https://github.com/bjarkehs"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
-    <div id="wrapper">
-        <header class="masthead" ng-controller="ContainerCtrl">
+    <div id="wrapper" ng-controller="ContainerCtrl">
+        <div class="toTop"><a href="" ng-click="scrollTo('top')">Top</a></div>
+        <header class="masthead">
             <div class="container">
                 <h1>Bjarke<span id="h">H</span>Søndergaard</h1>
                 <ul ui-scrollfix>
-                    <li><a href="" ng-click="scrollTo('welcome')">Hello</a></li>
-                    <li><a href="" ng-click="scrollTo('news')">News Feed</a></li>
+                    <li><a href="" ng-click="scrollTo('news')">Projects</a></li>
                     <li><a href="" ng-click="scrollTo('follow')">Follow Me</a></li>
                     <li><a href="" ng-click="scrollTo('contact')">Contact Info</a></li>
                     <div id="foo"></div>
